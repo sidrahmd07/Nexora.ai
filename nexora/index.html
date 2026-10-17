@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXORA | Learn • Build • Innovate</title>
+
+    <meta
+        name="description"
+        content="Nexora - The Next Generation Student Innovation Ecosystem"
+    >
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Nexora CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+     NEXORA GALAXY BACKGROUND
+===================================================== -->
+
+<div id="nexora-space">
+
+    <div class="space-stars"></div>
+
+    <div class="space-nebula"></div>
+
+    <div class="saturn-system">
+
+        <div class="saturn-ring"></div>
+
+        <div class="saturn-planet"></div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     LOADER
+===================================================== -->
+
+<div id="loader">
+
+    <div class="loader-logo">
+
+        <i class="fa-solid fa-infinity"></i>
+
+        <h1 class="nexora-title">
+
+            <span>N</span>
+            <span>E</span>
+            <span>X</span>
+            <span>O</span>
+            <span>R</span>
+            <span>A</span>
+
+        </h1>
+
+    </div>
+
+
+    <div class="loader-line"></div>
+
+
+    <p>
+        Building The Future...
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<div id="mainContent">
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================= -->
+
+    <header class="navbar">
+
+
+        <!-- LOGO -->
+
+        <div
+            class="logo"
+            onclick="goHome()"
+        >
+
+            <i class="fa-solid fa-infinity"></i>
+
+            <span>NEXORA</span>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a
+                        data-page="home"
+                        onclick="goHome()"
+                    >
+                        Home
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        data-page="about"
+                        onclick="showAbout()"
+                    >
+                        About
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        data-page="features"
+                        onclick="showFeatures()"
+                    >
+                        Features
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        data-page="team"
+                        onclick="showTeam()"
+                    >
+                        Team
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        data-page="contact"
+                        onclick="showContact()"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="courses.html">
+                        Courses
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+<!-- AUTH BUTTONS -->
+
+<div class="nav-actions">
+
+    <a
+        id="dashboardBtn"
+        class="glass-btn"
+        href="dashboard.html"
+        style="display: none; text-decoration: none; align-items: center;"
+    >
+        DASHBOARD
+    </a>
+
+    <button
+        id="logoutBtn"
+        class="glass-btn"
+        style="display: none;"
+    >
+        LOGOUT
+    </button>
+
+    <button
+        id="joinNexoraBtn"
+        class="gold-btn"
+    >
+        JOIN NEXORA
+    </button>
+
+</div>
+        
+    </header>
+
+
+    <!-- =================================================
+         HOME
+    ================================================= -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+
+        <!-- BACKGROUND -->
+
+        <div class="hero-bg">
+
+            <div class="grid"></div>
+
+            <div class="blur blur1"></div>
+
+            <div class="blur blur2"></div>
+
+        </div>
+
+
+        <!-- NX ANIMATION -->
+
+        <div class="nx-animation">
+
+
+            <div class="nx-letter n-letter">
+                N
+            </div>
+
+
+            <div class="nx-letter x-letter">
+                X
+            </div>
+
+
+        </div>
+
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content">
+
+
+            <span class="hero-badge">
+
+                🚀 India's Next Student Innovation Ecosystem
+
+            </span>
+
+
+            <h1>
+
+                Build Your
+
+                <span>
+                    Future
+                </span>
+
+                With Nexora
+
+            </h1>
+
+
+            <p>
+
+                Nexora is a next-generation student ecosystem
+                where students learn skills, build projects,
+                connect with mentors and create the future
+                of technology.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+           <button
+    class="gold-btn"
+    onclick="exploreNexora()"
+>
+    Explore Nexora
+</button>
+
+
+                <button
+                    class="glass-btn"
+                    onclick="showAbout()"
+                >
+
+                    Learn More
+
+                </button>
+
+
+            </div>
+
+
+            <!-- HERO STATS -->
+
+            <div class="hero-stats">
+
+
+                <div>
+
+                    <h2>
+                        10+
+                    </h2>
+
+                    <p>
+                        Core Members
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        6
+                    </h2>
+
+                    <p>
+                        Departments
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        ∞
+                    </h2>
+
+                    <p>
+                        Future Vision
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         ABOUT
+    ================================================= -->
+
+    <section
+        id="about"
+        class="about-section"
+    >
+
+
+        <div class="section-header">
+
+
+            <span>
+                ABOUT NEXORA
+            </span>
+
+
+            <h2>
+
+                More Than Learning.
+
+                <span>
+                    Building The Future.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Nexora is a student innovation ecosystem
+                designed to help learners transform ideas
+                into real-world technology.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <!-- VISION -->
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <h3>
+                    Vision
+                </h3>
+
+                <p>
+
+                    To create a powerful ecosystem where
+                    students learn, innovate and build
+                    future-ready solutions.
+
+                </p>
+
+            </div>
+
+
+            <!-- MISSION -->
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                </div>
+
+                <h3>
+                    Mission
+                </h3>
+
+                <p>
+
+                    Empowering students with practical skills,
+                    real projects, mentorship and opportunities.
+
+                </p>
+
+            </div>
+
+
+            <!-- LEARNING -->
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </div>
+
+                <h3>
+                    Learning Ecosystem
+                </h3>
+
+                <p>
+
+                    Structured learning paths that guide
+                    students from beginner level to advanced
+                    technology skills.
+
+                </p>
+
+            </div>
+
+
+            <!-- PROJECTS -->
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>
+                    Project Building
+                </h3>
+
+                <p>
+
+                    Helping students create real-world projects
+                    instead of only learning theory.
+
+                </p>
+
+            </div>
+
+
+            <!-- COMMUNITY -->
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                </div>
+
+                <h3>
+                    Community
+                </h3>
+
+                <p>
+
+                    A place where students, mentors and
+                    innovators grow together.
+
+                </p>
+
+            </div>
+
+
+            <!-- CAREER -->
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>
+                    Career Growth
+                </h3>
+
+                <p>
+
+                    Preparing students with skills,
+                    experience and opportunities for the future.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ABOUT HIGHLIGHT -->
+
+        <div class="about-highlight">
+
+            <div class="highlight-box">
+
+
+                <h2>
+                    "Learn. Build. Innovate."
+                </h2>
+
+
+                <p>
+
+                    Nexora combines education,
+                    technology, projects, mentorship and
+                    community into one powerful ecosystem
+                    for students.
+
+                </p>
+
+
+                <button
+    class="gold-btn"
+    onclick="exploreFeatures()"
+>
+    Explore Features
+</button>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         FEATURES / LEARNING PATHS
+    ================================================= -->
+
+    <section
+        id="features"
+        class="features-section"
+    >
+
+
+        <div class="section-header">
+
+
+            <span>
+                LEARNING PATHS
+            </span>
+
+
+            <h2>
+
+                Choose Your
+
+                <span>
+                    Tech Journey
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Every path contains structured modules,
+                quizzes, real-world projects,
+                progress tracking, and certificates.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <!-- AI & ML -->
+<!-- AI & ML -->
+
+<div
+    class="feature-card"
+    onclick="openProtectedFeature('aiml.html')"
+>
+
+    <div class="feature-icon">
+
+        <i class="fa-solid fa-brain"></i>
+
+    </div>
+
+    <h3>
+        Artificial Intelligence
+    </h3>
+
+    <p>
+
+        Python → Mathematics → Machine Learning →
+        Deep Learning → Projects
+
+    </p>
+
+    <button
+        class="gold-btn"
+        onclick="event.stopPropagation(); openProtectedFeature('aiml.html')"
+    >
+        Start Learning
+    </button>
+
+</div>
+            <!-- CYBER -->
+
+            <div
+    class="feature-card"
+    onclick="openProtectedFeature('cyber.html')"
+>
+
+                
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <h3>
+                    Cyber Security
+                </h3>
+
+
+                <p>
+
+                    Networking, Linux, Ethical Hacking,
+                    Digital Forensics & Security Labs.
+
+                </p>
+
+
+                <button
+                    class="gold-btn"
+                    onclick="event.stopPropagation(); openProtectedFeature('cyber.html')"
+                >
+
+                    Start Learning
+
+                </button>
+
+            </div>
+
+
+            <!-- WEB -->
+
+            <div class="feature-card coming-soon">
+
+                <span class="coming-badge">
+                    Coming Soon
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+
+                <h3>
+                    Web Development
+                </h3>
+
+
+                <p>
+
+                    HTML, CSS, JavaScript, React,
+                    Backend and Full Stack Development.
+
+                </p>
+
+
+                <button class="glass-btn" onclick="location.href='courses.html#web'">View syllabus</button>
+
+            </div>
+
+
+            <!-- DATA SCIENCE -->
+
+            <div class="feature-card coming-soon">
+
+                <span class="coming-badge">
+                    Coming Soon
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <h3>
+                    Data Science
+                </h3>
+
+
+                <p>
+
+                    NumPy, Pandas, Visualization,
+                    Statistics and Analytics.
+
+                </p>
+
+
+                <button class="glass-btn" onclick="location.href='courses.html#data'">View syllabus</button>
+
+            </div>
+
+
+            <!-- CLOUD -->
+
+            <div class="feature-card coming-soon">
+
+                <span class="coming-badge">
+                    Coming Soon
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                </div>
+
+
+                <h3>
+                    Cloud Computing
+                </h3>
+
+
+                <p>
+
+                    AWS, Azure, Docker,
+                    Kubernetes and DevOps.
+
+                </p>
+
+
+                <button class="glass-btn" onclick="location.href='courses.html#cloud'">View syllabus</button>
+
+            </div>
+
+
+            <!-- APP DEVELOPMENT -->
+
+            <div class="feature-card coming-soon">
+
+                <span class="coming-badge">
+                    Coming Soon
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+
+                <h3>
+                    App Development
+                </h3>
+
+
+                <p>
+
+                    Flutter, Android,
+                    Firebase and Mobile UI.
+
+                </p>
+
+
+                <button class="glass-btn" onclick="location.href='courses.html#app'">View syllabus</button>
+
+            </div>
+
+
+        </div>
+
+
+        <div
+            id="featureDetails"
+            class="feature-panel"
+        ></div>
+
+
+    </section>
+<!-- =================================================
+     NEXORA TEAM
+================================================= -->
+
+<section id="team" class="team-section">
+
+    <div class="section-header">
+
+        <span>OUR TEAM</span>
+
+        <h2>
+            Meet The <span>Nexora Team</span>
+        </h2>
+
+        <p>
+            The people building, designing and securing
+            the future of the Nexora ecosystem.
+        </p>
+
+    </div>
+
+
+    <!-- TEAM CAROUSEL -->
+
+    <div class="nexora-team-carousel">
+
+        <button
+            class="team-arrow team-arrow-left"
+            id="teamPrev"
+            type="button"
+        >
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <div
+            class="nexora-team-grid"
+            id="nexoraTeamGrid"
+        >
+
+            <!-- 01 — FOUNDER -->
+
+            <div
+                class="nexora-member active"
+                data-team="founder"
+                onclick="openTeamPopup('founder', this)"
+            >
+
+                <div class="member-photo">
+
+                    <img
+                        src="images/founder.jpg"
+                        alt="Sidrah Mohamed"
+                        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-placeholder',textContent:'SM'}))"
+                    >
+
+                    <div class="member-overlay"></div>
+
+                    <div class="member-number">
+                        01
+                    </div>
+
+                    <div class="member-open">
+                        +
+                    </div>
+
+                </div>
+
+
+                <div class="member-info">
+
+                    <span class="member-role">
+                        FOUNDER & CEO
+                    </span>
+
+                    <h3>
+                        Sidrah Mohamed
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 — CYBER -->
+
+            <div
+                class="nexora-member"
+                data-team="cyber"
+                onclick="openTeamPopup('cyber', this)"
+            >
+
+                <div class="member-photo">
+
+                    <div class="member-placeholder">
+                        CY
+                    </div>
+
+                    <div class="member-overlay"></div>
+
+                    <div class="member-number">
+                        02
+                    </div>
+
+                    <div class="member-open">
+                        +
+                    </div>
+
+                </div>
+
+
+                <div class="member-info">
+
+                    <span class="member-role">
+                        CYBERSECURITY
+                    </span>
+
+                    <h3>
+                        Indu
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 — AI ML -->
+
+            <div
+                class="nexora-member"
+                data-team="aiml"
+                onclick="openTeamPopup('aiml', this)"
+            >
+
+                <div class="member-photo">
+
+                    <div class="member-placeholder">
+                        AI
+                    </div>
+
+                    <div class="member-overlay"></div>
+
+                    <div class="member-number">
+                        03
+                    </div>
+
+                    <div class="member-open">
+                        +
+                    </div>
+
+                </div>
+
+
+                <div class="member-info">
+
+                    <span class="member-role">
+                        AI & ML
+                    </span>
+
+                    <h3>
+                   Vasavi
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 — WEB -->
+
+            <div
+                class="nexora-member"
+                data-team="web"
+                onclick="openTeamPopup('web', this)"
+            >
+
+                <div class="member-photo">
+
+                    <div class="member-placeholder">
+                        WD
+                    </div>
+
+                    <div class="member-overlay"></div>
+
+                    <div class="member-number">
+                        04
+                    </div>
+
+                    <div class="member-open">
+                        +
+                    </div>
+
+                </div>
+
+
+                <div class="member-info">
+
+                    <span class="member-role">
+                        WEB DEVELOPMENT
+                    </span>
+
+                    <h3>
+                        Web Lead
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 — CLOUD -->
+
+            <div
+                class="nexora-member"
+                data-team="cloud"
+                onclick="openTeamPopup('cloud', this)"
+            >
+
+                <div class="member-photo">
+
+                    <div class="member-placeholder">
+                        CL
+                    </div>
+
+                    <div class="member-overlay"></div>
+
+                    <div class="member-number">
+                        05
+                    </div>
+
+                    <div class="member-open">
+                        +
+                    </div>
+
+                </div>
+
+
+                <div class="member-info">
+
+                    <span class="member-role">
+                        CLOUD & DEVOPS
+                    </span>
+
+                    <h3>
+                        Cloud Lead
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 — DESIGN -->
+
+            <div
+                class="nexora-member"
+                data-team="design"
+                onclick="openTeamPopup('design', this)"
+            >
+
+                <div class="member-photo">
+
+                    <div class="member-placeholder">
+                        DS
+                    </div>
+
+                    <div class="member-overlay"></div>
+
+                    <div class="member-number">
+                        06
+                    </div>
+
+                    <div class="member-open">
+                        +
+                    </div>
+
+                </div>
+
+
+                <div class="member-info">
+
+                    <span class="member-role">
+                        UI / UX
+                    </span>
+
+                    <h3>
+                        Design Lead
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="team-arrow team-arrow-right"
+            id="teamNext"
+            type="button"
+        >
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+
+    <!-- SELECTED MEMBER DETAILS -->
+
+    <div
+        class="team-lead-details"
+        id="teamLeadDetails"
+    >
+
+        <div class="team-details-line"></div>
+
+        <div class="team-details-content">
+
+            <div class="team-details-number">
+                01
+            </div>
+
+            <div class="team-details-main">
+
+                <span
+                    id="teamDetailsRole"
+                    class="team-details-role"
+                >
+                    FOUNDER & CEO
+                </span>
+
+                <h2 id="teamDetailsName">
+                    Sidrah Mohamed
+                </h2>
+
+                <p id="teamDetailsDescription">
+                    Leading the vision, product development
+                    and future direction of the Nexora
+                    student ecosystem.
+                </p>
+
+                <div class="team-details-status">
+
+                    <span class="status-dot"></span>
+
+                    NEXORA OPERATIVE
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- =================================================
+         CONTACT
+    ================================================= -->
+
+    <section
+        id="contact"
+        class="contact-section"
+    >
+
+
+        <div class="section-header">
+
+
+            <span>
+                CONTACT
+            </span>
+
+
+            <h2>
+
+                Connect With
+
+                <span>
+                    Nexora
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Follow Nexora and become part of
+                the student innovation journey.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </div>
+
+
+                <h3>
+                    Instagram
+                </h3>
+
+
+                <p>
+                    @nexora.in
+                </p>
+
+            </div>
+
+
+            <!-- LINKEDIN -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </div>
+
+
+                <h3>
+                    LinkedIn
+                </h3>
+
+
+                <p>
+                    Nexora Official
+                </p>
+
+            </div>
+
+
+            <!-- GITHUB -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </div>
+
+
+                <h3>
+                    GitHub
+                </h3>
+
+
+                <p>
+                    Nexora Projects
+                </p>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+
+                <h3>
+                    Email
+                </h3>
+
+
+                <p>
+                    hello@nexora.in
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer class="footer">
+
+
+        <div class="footer-content">
+
+
+            <div class="footer-logo">
+
+                <i class="fa-solid fa-infinity"></i>
+
+                <span>
+                    NEXORA
+                </span>
+
+            </div>
+
+
+            <p>
+                Learn • Build • Innovate
+            </p>
+
+
+            <div class="social-icons">
+
+                <a>
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+
+                <a>
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+
+                <a>
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+            </div>
+
+
+            <small>
+                © 2026 Nexora. All Rights Reserved.
+            </small>
+
+
+        </div>
+
+
+    </footer>
+
+
+</div>
+
+
+<!-- =====================================================
+     GSAP
+===================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+<!-- =====================================================
+     NEXORA JAVASCRIPT
+===================================================== -->
+
+<script
+    type="module"
+    src="script.js"
+></script>
+
+
+</body>
+
+</html>

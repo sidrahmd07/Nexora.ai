@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXORA | AI Academy</title>
+
+<meta name="description"
+content="Learn Artificial Intelligence with NEXORA AI Academy.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="aiml.css">
+
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND EFFECTS -->
+
+<div class="grid-bg"></div>
+
+<div class="cursor-glow"></div>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-brain"></i>
+
+<span>NEXORA AI</span>
+
+</div>
+
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#modules">Modules</a>
+
+<a href="#projects">Projects</a>
+
+</nav>
+
+
+<button class="gold-btn" onclick="window.location.href='dashboard.html'">
+Dashboard
+</button>
+
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+
+<div class="hero-content">
+
+
+<div class="badge">
+
+AI ACADEMY
+
+</div>
+
+
+<h1>
+
+Master
+
+<span>Artificial Intelligence</span>
+
+with NEXORA
+
+</h1>
+
+
+<p>
+
+Learn Python, Machine Learning, Deep Learning,
+Computer Vision, NLP and Generative AI through
+interactive modules, videos, quizzes and projects.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<button class="gold-btn" onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})">
+Start Learning
+</button>
+
+
+<button class="glass-btn">
+
+Explore Modules
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="ai-core">
+
+
+<div class="core-ring"></div>
+
+<div class="core-ring two"></div>
+
+
+<i class="fa-solid fa-brain"></i>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- MODULE SECTION -->
+
+
+<section class="modules" id="modules">
+
+
+<div class="section-title">
+
+<span>AI LEARNING LAB</span>
+
+<h2>AI Modules</h2>
+
+<p>
+Complete AI step by step through practical modules.
+</p>
+
+
+</div>
+
+
+
+<div class="module-grid">
+
+
+
+<div class="module-card" data-href="python-home.html">
+
+<div class="module-icon">
+🐍
+</div>
+
+<h3>Python For AI</h3>
+
+<p>
+Programming foundation for Artificial Intelligence.
+</p>
+
+<button class="gold-btn">
+    Enter Module
+</button>
+
+</div>
+
+
+
+
+
+<div class="module-card" data-soon>
+
+<div class="module-icon">
+📊
+</div>
+
+<h3>Mathematics</h3>
+
+<p>
+Linear Algebra, Statistics and Calculus.
+</p>
+
+<button class="glass-btn">
+Coming soon
+</button>
+
+</div>
+
+
+
+
+
+<div class="module-card" data-soon>
+
+<div class="module-icon">
+🤖
+</div>
+
+<h3>Machine Learning</h3>
+
+<p>
+Train intelligent machine models.
+</p>
+
+<button class="glass-btn">
+Coming soon
+</button>
+
+</div>
+
+
+
+
+
+<div class="module-card" data-href="deeplearning.html">
+
+<div class="module-icon">
+🧠
+</div>
+
+<h3>Deep Learning</h3>
+
+<p>
+Neural Networks and Transformers.
+</p>
+
+<button class="gold-btn">
+Enter Module
+</button>
+
+</div>
+
+
+
+
+
+<div class="module-card" data-href="computer-vision.html" data-requires="nexoraDLQuizPassed">
+
+<div class="module-icon">
+👁️
+</div>
+
+<h3>Computer Vision</h3>
+
+<p>
+Teach computers to understand images.
+</p>
+
+<button class="gold-btn">
+Enter Module
+</button>
+
+</div>
+
+
+
+
+
+<div class="module-card" data-soon>
+
+<div class="module-icon">
+💬
+</div>
+
+<h3>NLP</h3>
+
+<p>
+Language models and AI communication.
+</p>
+
+<button class="glass-btn">
+Coming soon
+</button>
+
+</div>
+
+
+
+
+
+<div class="module-card" data-soon>
+
+<div class="module-icon">
+✨
+</div>
+
+<h3>Generative AI</h3>
+
+<p>
+LLMs, AI Agents and applications.
+</p>
+
+<button class="glass-btn">
+Coming soon
+</button>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- PROJECT LAB -->
+
+
+<section class="projects" id="projects">
+
+
+<div class="section-title">
+
+<span>AI LAB</span>
+
+<h2>Projects</h2>
+
+<p>
+Build real world AI applications.
+</p>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div class="project-card">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>AI Chatbot</h3>
+
+<p>
+Build your own intelligent assistant.
+</p>
+
+</div>
+
+
+<div class="project-card">
+
+<i class="fa-solid fa-image"></i>
+
+<h3>Image Classifier</h3>
+
+<p>
+Computer vision based AI project.
+</p>
+
+</div>
+
+
+<div class="project-card">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+<h3>Generative AI App</h3>
+
+<p>
+Create your own AI powered tool.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<h3>
+NEXORA AI
+</h3>
+
+<p>
+Learn • Build • Innovate
+</p>
+
+
+</footer>
+
+
+
+<script src="aiml.js"></script>
+
+
+<script type="module" src="nexora-guard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Student Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         GALAXY BACKGROUND
+    ====================================================== -->
+
+    <canvas id="galaxyCanvas"></canvas>
+
+    <div class="space-overlay"></div>
+
+    <div id="shootingStars"></div>
+
+
+    <!-- =====================================================
+         CINEMATIC INTRO
+    ====================================================== -->
+
+    <div id="introScreen">
+
+        <div class="intro-stars"></div>
+
+        <div class="intro-core">
+            <div class="intro-ring ring-one"></div>
+            <div class="intro-ring ring-two"></div>
+
+            <div class="intro-logo">
+                NEXORA
+            </div>
+
+            <div class="intro-line"></div>
+
+            <div class="intro-tagline">
+                LEARN • BUILD • INNOVATE
+            </div>
+        </div>
+
+        <div class="intro-status">
+            INITIALIZING STUDENT SYSTEM...
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         APP
+    ====================================================== -->
+
+    <div id="app" class="app hidden">
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="brand">
+                <div class="brand-mark">NX</div>
+
+                <div>
+                    <div class="brand-name">NEXORA</div>
+                    <div class="brand-sub">STUDENT SYSTEM</div>
+                </div>
+            </div>
+
+
+            <nav class="main-nav">
+
+                <button class="nav-link active" data-target="home">
+                    HOME
+                </button>
+
+                <button class="nav-link" data-target="learning">
+                    LEARN
+                </button>
+
+                <button class="nav-link" data-target="quizzes">
+                    QUIZZES
+                </button>
+
+                <button class="nav-link" data-target="projects">
+                    PROJECTS
+                </button>
+
+                <button class="nav-link" data-target="achievements">
+                    ACHIEVEMENTS
+                </button>
+
+                <button class="nav-link" data-target="community">
+                    COMMUNITY
+                </button>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button class="icon-button" id="notificationBtn">
+                    ◇
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button class="profile-mini" id="profileNavBtn">
+                    <span id="navAvatar">S</span>
+                </button>
+
+                <button class="icon-button" id="settingsBtn">
+                    ⚙
+                </button>
+
+                <button class="logout-button" id="logoutBtn">
+                    LOGOUT
+                </button>
+
+            </div>
+
+
+            <button class="mobile-menu-button" id="mobileMenuButton">
+                ☰
+            </button>
+
+        </header>
+
+
+        <!-- MOBILE NAV -->
+
+        <div class="mobile-nav" id="mobileNav">
+
+            <button data-target="home">HOME</button>
+            <button data-target="learning">LEARN</button>
+            <button data-target="quizzes">QUIZZES</button>
+            <button data-target="projects">PROJECTS</button>
+            <button data-target="achievements">ACHIEVEMENTS</button>
+            <button data-target="community">COMMUNITY</button>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main class="dashboard-container">
+
+
+            <!-- =================================================
+                 HOME
+            ================================================== -->
+
+            <section id="home" class="dashboard-section">
+
+
+                <!-- WELCOME -->
+
+                <div class="welcome-section reveal">
+
+                    <div>
+
+                        <div class="system-label">
+                            NEXORA // STUDENT OPERATING SYSTEM
+                        </div>
+
+                        <h1>
+                            WELCOME BACK,
+                            <span id="welcomeName">NEXORIAN</span>
+                        </h1>
+
+                        <p>
+                            Your next level is waiting.
+                            Keep learning. Keep building.
+                        </p>
+
+                    </div>
+
+
+                    <div class="welcome-date">
+
+                        <span id="currentDate">
+                            SYSTEM DATE
+                        </span>
+
+                        <strong id="currentTime">
+                            00:00:00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE + XP -->
+
+                <div class="profile-grid reveal">
+
+
+                    <article class="profile-card glass-card">
+
+                        <div class="card-topline">
+
+                            <span>01 // IDENTITY</span>
+
+                            <button id="editProfileBtn" class="text-button">
+                                EDIT
+                            </button>
+
+                        </div>
+
+
+                        <div class="profile-main">
+
+                            <div class="avatar-large" id="profileAvatar">
+                                S
+                            </div>
+
+                            <div class="profile-info">
+
+                                <h2 id="profileName">
+                                    Sidrah Mohamed
+                                </h2>
+
+                                <span id="profileUsername">
+                                    @sid
+                                </span>
+
+                                <p>
+                                    Computer Science Engineering
+                                </p>
+
+                                <small>
+                                    NEXORA STUDENT
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-stats">
+
+                            <div>
+                                <span>STREAK</span>
+                                <strong id="streakValue">12</strong>
+                                <small>DAYS</small>
+                            </div>
+
+                            <div>
+                                <span>COURSES</span>
+                                <strong id="coursesValue">8</strong>
+                                <small>DONE</small>
+                            </div>
+
+                            <div>
+                                <span>PROJECTS</span>
+                                <strong id="projectsValue">4</strong>
+                                <small>DONE</small>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- XP CARD -->
+
+                    <article class="xp-card glass-card">
+
+                        <div class="card-topline">
+
+                            <span>02 // LEVEL SYSTEM</span>
+
+                            <span id="levelStatus">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="level-header">
+
+                            <div>
+
+                                <small>CURRENT LEVEL</small>
+
+                                <strong>
+                                    LEVEL
+                                    <span id="levelNumber">
+                                        07
+                                    </span>
+                                </strong>
+
+                            </div>
+
+                            <div class="xp-total">
+
+                                <strong id="xpCurrent">
+                                    2840
+                                </strong>
+
+                                <span>
+                                    /
+                                    <span id="xpRequired">
+                                        4000
+                                    </span>
+                                    XP
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="xp-bar">
+
+                            <div
+                                class="xp-fill"
+                                id="xpFill"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="xp-bottom">
+
+                            <span>
+                                CURRENT XP
+                                <strong id="currentXpText">
+                                    2,840
+                                </strong>
+                            </span>
+
+                            <span>
+                                NEXT LEVEL
+                                <strong id="remainingXp">
+                                    1,160 XP
+                                </strong>
+                            </span>
+
+                        </div>
+
+
+                        <!-- LEVEL ROAD -->
+
+                        <div class="level-road">
+
+                            <div class="level-node">
+                                01
+                            </div>
+
+                            <div class="level-line"></div>
+
+                            <div class="level-node">
+                                02
+                            </div>
+
+                            <div class="level-line"></div>
+
+                            <div class="level-node">
+                                03
+                            </div>
+
+                            <div class="level-line"></div>
+
+                            <div class="level-node">
+                                04
+                            </div>
+
+                            <div class="level-line"></div>
+
+                            <div class="level-node">
+                                05
+                            </div>
+
+                            <div class="level-line"></div>
+
+                            <div class="level-node">
+                                06
+                            </div>
+
+                            <div class="level-line"></div>
+
+                            <div class="level-node current">
+                                07
+                            </div>
+
+                            <div class="level-line"></div>
+
+                            <div class="level-node next">
+                                08
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- TODAY -->
+
+                <div class="today-grid reveal">
+
+                    <article class="today-card glass-card">
+
+                        <div class="card-topline">
+                            <span>03 // PROGRESS</span>
+                            <span>OVERALL PROGRESS</span>
+                        </div>
+
+
+                        <div class="progress-row">
+
+                            <div class="progress-info">
+                                <span>LEARNING</span>
+<strong id="progLearning">0%</strong>
+                            </div>
+
+                            <div class="thin-progress">
+                                <div id="progLearningFill" style="width:0%"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-row">
+
+                            <div class="progress-info">
+                                <span>QUIZ SCORE</span>
+<strong id="progQuiz">0%</strong>
+                            </div>
+
+                            <div class="thin-progress">
+                                <div id="progQuizFill" style="width:0%"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-row">
+
+                            <div class="progress-info">
+                                <span>MODULES DONE</span>
+<strong id="progModules">0%</strong>
+                            </div>
+
+                            <div class="thin-progress">
+                                <div id="progModulesFill" style="width:0%"></div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="coins-card glass-card">
+
+                        <div class="card-topline">
+                            <span>04 // REWARDS</span>
+                            <span>NEXORA COINS</span>
+                        </div>
+
+                        <div class="coin-number">
+                            <span>◈</span>
+                            <strong id="coinValue">
+                                1280
+                            </strong>
+                        </div>
+
+                        <p>
+                            +<span id="todayCoins">35</span>
+                            coins earned today
+                        </p>
+
+                        <div class="coin-source">
+                            DAILY LOGIN • LESSONS • QUIZZES • PROJECTS
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- CONTINUE -->
+
+                <article class="continue-card glass-card reveal">
+
+                    <div class="continue-left">
+
+                        <div class="system-label" id="contLabel">
+                            CONTINUE WHERE YOU LEFT OFF
+                        </div>
+
+                        <h2 id="contTitle">
+                            Loading your progress
+                        </h2>
+
+                        <p id="contDetail">
+                            &nbsp;
+                        </p>
+
+                        <div class="continue-progress">
+
+                            <div class="progress-label">
+                                <span id="contPercent">0% COMPLETE</span>
+                                <span id="contTrack">&nbsp;</span>
+                            </div>
+
+                            <div class="thin-progress">
+                                <div id="contFill" style="width:0%"></div>
+                            </div>
+
+                        </div>
+
+                        <button
+                            id="contButton"
+                            class="primary-button"
+                            type="button"
+                        >
+                            <span id="contButtonText">CONTINUE LEARNING</span>
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="continue-visual">
+
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+                        <div class="orbit-core" id="contIcon">NX</div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 LEARNING
+            ================================================== -->
+
+            <section id="learning" class="dashboard-section">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span>05 // LEARNING SYSTEM</span>
+
+                        <h2>
+                            MY LEARNING
+                        </h2>
+
+                        <p>
+                            Build your skills one chapter at a time.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="learning-grid" id="learningGrid"></div>
+
+            </section>
+
+
+            <!-- =================================================
+                 QUIZZES
+            ================================================== -->
+
+            <section id="quizzes" class="dashboard-section">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span>06 // KNOWLEDGE ENGINE</span>
+
+                        <h2>
+                            NEXORA QUIZ CENTER
+                        </h2>
+
+                        <p>
+                            Test what you learned. Earn XP. Level up.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- DAILY QUIZ -->
+
+                <article class="daily-quiz glass-card reveal">
+
+                    <div class="daily-quiz-info">
+
+                        <span class="system-label">
+                            DAILY QUIZ
+                        </span>
+
+                        <h2>
+                            Test what you learned today.
+                        </h2>
+
+                        <p>
+                            A quick knowledge challenge designed
+                            to keep your learning streak alive.
+                        </p>
+
+                        <div class="quiz-meta">
+
+                            <span>10 QUESTIONS</span>
+                            <span>MEDIUM</span>
+                            <span>+100 XP</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="primary-button quiz-start"
+                        data-quiz="daily"
+                    >
+                        START QUIZ
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- EXTRA CHALLENGES -->
+
+                <div class="sub-heading">
+                    EXTRA CHALLENGES
+                </div>
+
+
+                <div class="quiz-grid">
+
+
+                    <article class="quiz-card glass-card">
+
+                        <span>01</span>
+
+                        <h3>Quick Quiz</h3>
+
+                        <p>
+                            5 questions
+                        </p>
+
+                        <div class="quiz-card-bottom">
+                            <strong>+50 XP</strong>
+
+                            <button
+                                class="small-button"
+                                data-quiz="quick"
+                            >
+                                START
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="quiz-card glass-card">
+
+                        <span>02</span>
+
+                        <h3>Brain Challenge</h3>
+
+                        <p>
+                            10 questions
+                        </p>
+
+                        <div class="quiz-card-bottom">
+                            <strong>+100 XP</strong>
+
+                            <button
+                                class="small-button"
+                                data-quiz="brain"
+                            >
+                                START
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="quiz-card glass-card">
+
+                        <span>03</span>
+
+                        <h3>Coding Quiz</h3>
+
+                        <p>
+                            Programming questions
+                        </p>
+
+                        <div class="quiz-card-bottom">
+                            <strong>+150 XP</strong>
+
+                            <button
+                                class="small-button"
+                                data-quiz="coding"
+                            >
+                                START
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="quiz-card glass-card">
+
+                        <span>04</span>
+
+                        <h3>Cyber Challenge</h3>
+
+                        <p>
+                            Cybersecurity questions
+                        </p>
+
+                        <div class="quiz-card-bottom">
+                            <strong>+150 XP</strong>
+
+                            <button
+                                class="small-button"
+                                data-quiz="cyber"
+                            >
+                                START
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="quiz-card glass-card">
+
+                        <span>05</span>
+
+                        <h3>AI Challenge</h3>
+
+                        <p>
+                            AI / ML questions
+                        </p>
+
+                        <div class="quiz-card-bottom">
+                            <strong>+150 XP</strong>
+
+                            <button
+                                class="small-button"
+                                data-quiz="ai"
+                            >
+                                START
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="quiz-card glass-card">
+
+                        <span>06</span>
+
+                        <h3>Random Challenge</h3>
+
+                        <p>
+                            Mixed questions
+                        </p>
+
+                        <div class="quiz-card-bottom">
+                            <strong>+200 XP</strong>
+
+                            <button
+                                class="small-button"
+                                data-quiz="random"
+                            >
+                                START
+                            </button>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- QUIZ STATISTICS -->
+
+                <div class="quiz-stat-grid">
+
+                    <article class="stats-card glass-card">
+
+                        <div class="card-topline">
+                            <span>07 // PERFORMANCE</span>
+                            <span>QUIZ PERFORMANCE</span>
+                        </div>
+
+                        <div class="stat-numbers">
+
+                            <div>
+                                <strong id="quizzesCompleted">38</strong>
+                                <span>QUIZZES</span>
+                            </div>
+
+                            <div>
+                                <strong id="averageScore">86%</strong>
+                                <span>AVERAGE</span>
+                            </div>
+
+                            <div>
+                                <strong id="bestScore">100%</strong>
+                                <span>BEST</span>
+                            </div>
+
+                            <div>
+                                <strong id="questionsSolved">420</strong>
+                                <span>QUESTIONS</span>
+                            </div>
+
+                            <div>
+                                <strong id="correctAnswers">361</strong>
+                                <span>CORRECT</span>
+                            </div>
+
+                            <div>
+                                <strong id="accuracy">86%</strong>
+                                <span>ACCURACY</span>
+                            </div>
+
+                        </div>
+
+                        <div class="performance-chart">
+
+                            <div style="height:55%"></div>
+                            <div style="height:72%"></div>
+                            <div style="height:64%"></div>
+                            <div style="height:86%"></div>
+                            <div style="height:78%"></div>
+                            <div style="height:92%"></div>
+                            <div style="height:86%"></div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- STREAK -->
+
+                    <article class="streak-card glass-card">
+
+                        <div class="card-topline">
+                            <span>08 // CONSISTENCY</span>
+                            <span>LEARNING STREAK</span>
+                        </div>
+
+                        <div class="streak-number">
+                            <strong id="streakBig">
+                                12
+                            </strong>
+
+                            <span>
+                                DAYS
+                            </span>
+                        </div>
+
+                        <p>
+                            Keep your streak alive.
+                        </p>
+
+
+                        <div class="week">
+
+                            <div class="day completed">
+                                <span>MON</span>
+                                <b>✓</b>
+                            </div>
+
+                            <div class="day completed">
+                                <span>TUE</span>
+                                <b>✓</b>
+                            </div>
+
+                            <div class="day completed">
+                                <span>WED</span>
+                                <b>✓</b>
+                            </div>
+
+                            <div class="day completed">
+                                <span>THU</span>
+                                <b>✓</b>
+                            </div>
+
+                            <div class="day completed">
+                                <span>FRI</span>
+                                <b>✓</b>
+                            </div>
+
+                            <div class="day">
+                                <span>SAT</span>
+                                <b>○</b>
+                            </div>
+
+                            <div class="day">
+                                <span>SUN</span>
+                                <b>○</b>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ACHIEVEMENTS
+            ================================================== -->
+
+            <section id="achievements" class="dashboard-section">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span>09 // PROGRESSION</span>
+
+                        <h2>
+                            ACHIEVEMENTS
+                        </h2>
+
+                        <p>
+                            Every milestone becomes part of your story.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="achievement-grid" id="achievementGrid">
+
+
+                    <article
+                        class="achievement-card unlocked"
+                        data-achievement="quiz"
+                    >
+                        <div class="achievement-icon">01</div>
+                        <h3>First Quiz</h3>
+                        <p>Complete your first quiz.</p>
+                    </article>
+
+
+                    <article
+                        class="achievement-card unlocked"
+                        data-achievement="streak"
+                    >
+                        <div class="achievement-icon">02</div>
+                        <h3>7 Day Streak</h3>
+                        <p>Maintain a seven-day streak.</p>
+                    </article>
+
+
+                    <article
+                        class="achievement-card unlocked"
+                        data-achievement="tenquiz"
+                    >
+                        <div class="achievement-icon">03</div>
+                        <h3>10 Quizzes</h3>
+                        <p>Complete ten quizzes.</p>
+                    </article>
+
+
+                    <article
+                        class="achievement-card unlocked"
+                        data-achievement="project"
+                    >
+                        <div class="achievement-icon">04</div>
+                        <h3>First Project</h3>
+                        <p>Build your first project.</p>
+                    </article>
+
+
+                    <article
+                        class="achievement-card"
+                        data-achievement="ai"
+                    >
+                        <div class="achievement-icon">05</div>
+                        <h3>AI Explorer</h3>
+                        <p>Reach 50% AI / ML progress.</p>
+                    </article>
+
+
+                    <article
+                        class="achievement-card"
+                        data-achievement="cyber"
+                    >
+                        <div class="achievement-icon">06</div>
+                        <h3>Cyber Rookie</h3>
+                        <p>Reach 50% cybersecurity progress.</p>
+                    </article>
+
+
+                    <article
+                        class="achievement-card"
+                        data-achievement="builder"
+                    >
+                        <div class="achievement-icon">07</div>
+                        <h3>Project Builder</h3>
+                        <p>Complete four projects.</p>
+                    </article>
+
+
+                    <article
+                        class="achievement-card"
+                        data-achievement="level10"
+                    >
+                        <div class="achievement-icon">08</div>
+                        <h3>Level 10</h3>
+                        <p>Reach level ten.</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PROJECTS
+            ================================================== -->
+
+            <section id="projects" class="dashboard-section">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span>10 // BUILD SYSTEM</span>
+
+                        <h2>
+                            MY PROJECTS
+                        </h2>
+
+                        <p>
+                            Turn what you learn into something real.
+                        </p>
+                    </div>
+
+                    <button
+                        class="secondary-button"
+                        id="newProjectBtn"
+                    >
+                        + NEW PROJECT
+                    </button>
+
+                </div>
+
+
+                <div class="project-grid">
+
+
+                    <article class="project-card glass-card">
+
+                        <div class="project-number">
+                            PROJECT 01
+                        </div>
+
+                        <h3>
+                            PhishLens
+                        </h3>
+
+                        <span>
+                            CYBERSECURITY
+                        </span>
+
+                        <div class="project-progress">
+                            <div style="width:100%"></div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <strong>COMPLETED</strong>
+                            <small>RECENTLY</small>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card glass-card">
+
+                        <div class="project-number">
+                            PROJECT 02
+                        </div>
+
+                        <h3>
+                            NEXORA Bus Saver
+                        </h3>
+
+                        <span>
+                            WEB DEVELOPMENT
+                        </span>
+
+                        <div class="project-progress">
+                            <div style="width:62%"></div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <strong>PROTOTYPE</strong>
+                            <small>ACTIVE</small>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card glass-card">
+
+                        <div class="project-number">
+                            PROJECT 03
+                        </div>
+
+                        <h3>
+                            AI Learning Assistant
+                        </h3>
+
+                        <span>
+                            AI / ML
+                        </span>
+
+                        <div class="project-progress">
+                            <div style="width:38%"></div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <strong>IN PROGRESS</strong>
+                            <small>ACTIVE</small>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 AI
+            ================================================== -->
+
+            <section id="community" class="dashboard-section">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span>11 // INTELLIGENCE</span>
+
+                        <h2>
+                            NEXORA AI
+                        </h2>
+
+                        <p>
+                            Your learning companion is ready.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <article class="ai-card glass-card reveal">
+
+                    <div class="ai-visual">
+
+                        <div class="ai-orbit orbit-a"></div>
+                        <div class="ai-orbit orbit-b"></div>
+                        <div class="ai-orbit orbit-c"></div>
+
+                        <div class="ai-core">
+
+                            <div class="ai-core-inner">
+                                NX
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ai-content">
+
+                        <span class="system-label">
+                            NEXORA AI // ONLINE
+                        </span>
+
+                        <h2>
+                            Your learning companion
+                            is ready.
+                        </h2>
+
+                        <p>
+                            Ask questions, understand difficult
+                            topics, debug your code and plan your
+                            next learning step.
+                        </p>
+
+
+                        <div class="ai-actions">
+
+                            <button
+                                class="primary-button ai-button"
+                                data-ai="ASK NEXORA AI"
+                            >
+                                ASK NEXORA AI
+                            </button>
+
+                            <button
+                                class="secondary-button ai-button"
+                                data-ai="GET STUDY HELP"
+                            >
+                                GET STUDY HELP
+                            </button>
+
+                            <button
+                                class="secondary-button ai-button"
+                                data-ai="EXPLAIN THIS"
+                            >
+                                EXPLAIN THIS
+                            </button>
+
+                            <button
+                                class="secondary-button ai-button"
+                                data-ai="DEBUG MY CODE"
+                            >
+                                DEBUG MY CODE
+                            </button>
+
+                        </div>
+
+                        <div
+                            class="ai-response"
+                            id="aiResponse"
+                        >
+                            NEXORA AI IS WAITING...
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RECENT ACTIVITY -->
+
+                <div class="activity-grid">
+
+                    <article class="activity-card glass-card">
+
+                        <div class="card-topline">
+                            <span>12 // TIMELINE</span>
+                            <span>RECENT ACTIVITY</span>
+                        </div>
+
+
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <span>✓</span>
+                                <div>
+                                    <strong>
+                                        Completed JavaScript Basics
+                                    </strong>
+                                    <small>
+                                        Today
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>✓</span>
+                                <div>
+                                    <strong>
+                                        Scored 86% in Daily Quiz
+                                    </strong>
+                                    <small>
+                                        Today
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>+</span>
+                                <div>
+                                    <strong>
+                                        Earned 100 XP
+                                    </strong>
+                                    <small>
+                                        Yesterday
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>✓</span>
+                                <div>
+                                    <strong>
+                                        Completed Cybersecurity Module
+                                    </strong>
+                                    <small>
+                                        Yesterday
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>→</span>
+                                <div>
+                                    <strong>
+                                        Started Python Basics
+                                    </strong>
+                                    <small>
+                                        2 days ago
+                                    </small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="dashboard-footer">
+
+            <span>
+                NEXORA
+            </span>
+
+            <span>
+                LEARN • BUILD • INNOVATE
+            </span>
+
+            <span>
+                STUDENT SYSTEM ONLINE
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =====================================================
+         QUIZ MODAL
+    ====================================================== -->
+
+    <div class="modal-overlay" id="quizModal">
+
+        <div class="quiz-modal">
+
+            <button class="modal-close" id="closeQuiz">
+                ×
+            </button>
+
+            <div class="quiz-header">
+
+                <span id="quizCategory">
+                    NEXORA QUIZ
+                </span>
+
+                <strong id="quizProgress">
+                    01 / 05
+                </strong>
+
+            </div>
+
+
+            <div class="quiz-question">
+
+                <span id="quizQuestionNumber">
+                    QUESTION 01
+                </span>
+
+                <h2 id="quizQuestion">
+                    Loading question...
+                </h2>
+
+            </div>
+
+
+            <div
+                class="quiz-options"
+                id="quizOptions"
+            ></div>
+
+
+            <div class="quiz-footer">
+
+                <span id="quizXpReward">
+                    +50 XP
+                </span>
+
+                <button
+                    class="primary-button"
+                    id="nextQuestion"
+                    disabled
+                >
+                    NEXT
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         QUIZ RESULT
+    ====================================================== -->
+
+    <div class="modal-overlay" id="resultModal">
+
+        <div class="result-modal">
+
+            <div class="result-icon">
+                NX
+            </div>
+
+            <span>
+                QUIZ COMPLETE
+            </span>
+
+            <h2 id="resultScore">
+                86%
+            </h2>
+
+            <p id="resultText">
+                Great work.
+            </p>
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="resultCorrect">
+                        4
+                    </strong>
+
+                    <span>
+                        CORRECT
+                    </span>
+                </div>
+
+                <div>
+                    <strong id="resultQuestions">
+                        5
+                    </strong>
+
+                    <span>
+                        QUESTIONS
+                    </span>
+                </div>
+
+                <div>
+                    <strong id="resultXp">
+                        +50
+                    </strong>
+
+                    <span>
+                        XP
+                    </span>
+                </div>
+
+            </div>
+
+            <button
+                class="primary-button"
+                id="closeResult"
+            >
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROFILE MODAL
+    ====================================================== -->
+
+    <div class="modal-overlay" id="profileModal">
+
+        <div class="edit-modal">
+
+            <button class="modal-close" id="closeProfile">
+                ×
+            </button>
+
+            <span>
+                NEXORA // PROFILE EDITOR
+            </span>
+
+            <h2>
+                Edit Profile
+            </h2>
+
+            <label>
+                NAME
+
+                <input
+                    type="text"
+                    id="editName"
+                    placeholder="Your name"
+                >
+            </label>
+
+            <label>
+                USERNAME
+
+                <input
+                    type="text"
+                    id="editUsername"
+                    placeholder="@username"
+                >
+            </label>
+
+            <button
+                class="primary-button"
+                id="saveProfile"
+            >
+                SAVE PROFILE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div id="toast"></div>
+
+
+    <script src="dashboard.js"></script>
+
+<script type="module" src="dashboard-live.js"></script>
+<script type="module" src="nexora-guard.js"></script>
+</body>
+</html>

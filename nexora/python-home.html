@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Python Academy</title>
+
+    <meta
+        name="description"
+        content="NEXORA Python Academy - Complete Python learning journey from beginner to project builder."
+    >
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- PYTHON HOME CSS -->
+
+    <link
+        rel="stylesheet"
+        href="python-home.css">
+
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="grid-bg"></div>
+
+<div class="cursor-glow"></div>
+
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="python-navbar">
+
+
+    <div class="python-logo">
+
+        <i class="fa-brands fa-python"></i>
+
+        <span>NEXORA</span>
+
+    </div>
+
+
+    <div class="academy-name">
+
+        PYTHON ACADEMY
+
+    </div>
+
+
+    <div class="hud">
+
+
+        <div class="hud-item">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <span id="xpDisplay">
+                0 XP
+            </span>
+
+        </div>
+
+
+        <div class="hud-item">
+
+            <i class="fa-solid fa-fire"></i>
+
+            <span id="streakDisplay">
+                0
+            </span>
+
+        </div>
+
+
+        <div class="level-display">
+
+            <span>PLAYER LEVEL</span>
+
+            <strong id="levelDisplay">
+                01
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="academy-hero">
+
+
+    <div class="hero-left">
+
+
+        <div class="back-area">
+
+            <button
+                class="back-btn"
+                type="button"
+                onclick="goBackToAIML()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to AIML
+
+            </button>
+
+        </div>
+
+
+        <span class="mission-tag">
+
+            <i class="fa-brands fa-python"></i>
+
+            NEXORA PYTHON ACADEMY
+
+        </span>
+
+
+        <h1>
+
+            Master
+
+            <span>Python.</span>
+
+            Build The Future.
+
+        </h1>
+
+
+        <p>
+
+            Your complete Python journey starts here.
+            Follow the levels, complete missions,
+            earn XP and become a real Python builder.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+
+            <button
+                class="primary-btn"
+                type="button"
+                onclick="continuePython()">
+
+                ENTER PYTHON WORLD
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <button
+                class="secondary-btn"
+                type="button"
+                onclick="scrollToRoadmap()">
+
+                View Full Roadmap
+
+                <i class="fa-solid fa-map"></i>
+
+            </button>
+
+
+        </div>
+
+
+        <div class="hero-stats">
+
+
+            <div>
+
+                <strong id="completedLevels">
+                    0
+                </strong>
+
+                <span>
+                    LEVELS COMPLETE
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong id="totalLevels">
+                    10
+                </strong>
+
+                <span>
+                    TOTAL LEVELS
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong id="overallPercent">
+                    0%
+                </strong>
+
+                <span>
+                    JOURNEY COMPLETE
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         PYTHON CORE
+    ================================================== -->
+
+    <div class="hero-right">
+
+
+        <div class="python-core">
+
+
+            <div class="core-ring ring-1"></div>
+
+            <div class="core-ring ring-2"></div>
+
+            <div class="core-ring ring-3"></div>
+
+
+            <div class="python-symbol">
+
+                <i class="fa-brands fa-python"></i>
+
+            </div>
+
+
+            <div class="floating-code code-one">
+
+                &lt; / &gt;
+
+            </div>
+
+
+            <div class="floating-code code-two">
+
+                PY
+
+            </div>
+
+
+            <div class="floating-code code-three">
+
+                01
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CURRENT POSITION
+===================================================== -->
+
+<section class="journey-status">
+
+
+    <div class="status-card">
+
+
+        <div class="status-icon">
+
+            <i class="fa-solid fa-location-crosshairs"></i>
+
+        </div>
+
+
+        <div class="status-info">
+
+            <span>
+                CURRENT POSITION
+            </span>
+
+
+            <h2 id="currentLevelName">
+                Level 01 — Python Basics
+            </h2>
+
+
+            <p id="currentLevelDescription">
+
+                Start your Python journey
+                from the fundamentals.
+
+            </p>
+
+        </div>
+
+
+        <button
+            class="continue-small"
+            type="button"
+            onclick="continuePython()">
+
+            Start Level
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ROADMAP
+===================================================== -->
+
+<section
+    class="roadmap-section"
+    id="pythonRoadmap">
+
+
+    <div class="section-heading">
+
+
+        <span>
+            THE COMPLETE JOURNEY
+        </span>
+
+
+        <h2>
+
+            Python
+
+            <strong>Roadmap</strong>
+
+        </h2>
+
+
+        <p>
+
+            Complete each level to unlock
+            the next stage of your Python journey.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         PROGRESS
+    ================================================== -->
+
+    <div class="roadmap-progress">
+
+
+        <div class="progress-heading">
+
+            <span>
+                PYTHON JOURNEY PROGRESS
+            </span>
+
+
+            <strong id="roadmapPercent">
+                0%
+            </strong>
+
+        </div>
+
+
+        <div class="progress-track">
+
+            <div
+                id="roadmapFill"
+                class="progress-fill">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         LEVEL MAP
+    ================================================== -->
+
+    <div class="level-map">
+
+
+        <!-- LEVEL 01 -->
+
+        <article
+            class="level-card"
+            data-level="1">
+
+
+            <div class="level-number">
+                01
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-terminal"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Python Basics
+            </h3>
+
+
+            <p>
+                Learn Python fundamentals
+                from zero and write your first programs.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    10 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    150 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button"
+                onclick="openPythonLevel(1)">
+
+                Start Level
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 02 -->
+
+        <article
+            class="level-card"
+            data-level="2">
+
+
+            <div class="level-number">
+                02
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-code-branch"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Control Flow
+            </h3>
+
+
+            <p>
+                Master conditions, loops,
+                decisions and program flow.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    8 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    200 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 03 -->
+
+        <article
+            class="level-card"
+            data-level="3">
+
+
+            <div class="level-number">
+                03
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Data Structures
+            </h3>
+
+
+            <p>
+                Learn lists, tuples, sets,
+                dictionaries and collections.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    10 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    250 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 04 -->
+
+        <article
+            class="level-card"
+            data-level="4">
+
+
+            <div class="level-number">
+                04
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-gears"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Functions
+            </h3>
+
+
+            <p>
+                Build reusable functions,
+                parameters, return values and scope.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    9 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    250 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 05 -->
+
+        <article
+            class="level-card"
+            data-level="5">
+
+
+            <div class="level-number">
+                05
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-cubes"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Object Oriented Python
+            </h3>
+
+
+            <p>
+                Understand classes, objects,
+                inheritance and polymorphism.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    8 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    300 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 06 -->
+
+        <article
+            class="level-card"
+            data-level="6">
+
+
+            <div class="level-number">
+                06
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-file-code"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Files & Exceptions
+            </h3>
+
+
+            <p>
+                Read files, write files and
+                handle Python errors properly.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    7 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    250 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 07 -->
+
+        <article
+            class="level-card"
+            data-level="7">
+
+
+            <div class="level-number">
+                07
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-boxes-stacked"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Modules & Libraries
+            </h3>
+
+
+            <p>
+                Learn modules, packages,
+                pip and useful Python libraries.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    7 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    250 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 08 -->
+
+        <article
+            class="level-card"
+            data-level="8">
+
+
+            <div class="level-number">
+                08
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-microchip"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Advanced Python
+            </h3>
+
+
+            <p>
+                Explore generators, decorators,
+                iterators, APIs and advanced concepts.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    8 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    350 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 09 -->
+
+        <article
+            class="level-card"
+            data-level="9">
+
+
+            <div class="level-number">
+                09
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Problem Solving
+            </h3>
+
+
+            <p>
+                Improve logic, coding skills
+                and real Python problem solving.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    12 Modules
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    400 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- LEVEL 10 -->
+
+        <article
+            class="level-card final-level"
+            data-level="10">
+
+
+            <div class="level-number">
+                10
+            </div>
+
+
+            <div class="level-icon">
+
+                <i class="fa-solid fa-rocket"></i>
+
+            </div>
+
+
+            <div class="level-state">
+                LOADING
+            </div>
+
+
+            <h3>
+                Python Projects
+            </h3>
+
+
+            <p>
+                Build real-world Python
+                applications and complete your journey.
+            </p>
+
+
+            <div class="level-meta">
+
+                <span>
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    10 Projects
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    500 XP
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="level-btn"
+                type="button">
+
+                Locked
+
+                <i class="fa-solid fa-lock"></i>
+
+            </button>
+
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     NEXT TARGET
+===================================================== -->
+
+<section class="next-section">
+
+
+    <div class="next-card">
+
+
+        <div class="next-icon">
+
+            <i class="fa-solid fa-route"></i>
+
+        </div>
+
+
+        <div class="next-info">
+
+
+            <span>
+                YOUR NEXT TARGET
+            </span>
+
+
+            <h2 id="nextTarget">
+                Level 01 — Python Basics
+            </h2>
+
+
+            <p id="nextTargetDescription">
+
+                Start Python Basics
+                and begin your Python journey.
+
+            </p>
+
+
+        </div>
+
+
+        <button
+            class="primary-btn"
+            type="button"
+            onclick="continuePython()">
+
+            Start
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="python-footer">
+
+
+    <div class="footer-logo">
+
+        <i class="fa-brands fa-python"></i>
+
+        NEXORA PYTHON ACADEMY
+
+    </div>
+
+
+    <p>
+        Learn • Build • Master
+    </p>
+
+
+    <small>
+        Python is just the beginning.
+    </small>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     PYTHON HOME JS
+===================================================== -->
+
+<script src="python-home.js"></script>
+
+
+<script type="module" src="nexora-guard.js"></script>
+</body>
+
+</html> 
+

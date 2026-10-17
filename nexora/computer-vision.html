@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Computer Vision Basics</title>
+
+    <meta name="description"
+        content="Learn Computer Vision with NOVA, your AI learning companion inside NEXORA AI Academy.">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- COMPUTER VISION CSS -->
+    <link rel="stylesheet" href="computer-vision.css">
+
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+BACKGROUND
+========================================= -->
+
+<div class="grid-bg"></div>
+
+<div class="cursor-glow"></div>
+
+
+<!-- =========================================
+NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-eye"></i>
+
+        <span>NEXORA</span>
+
+    </div>
+
+
+    <div class="module-name">
+
+        COMPUTER VISION BASICS
+
+    </div>
+
+
+    <div class="xp-display">
+
+        <i class="fa-solid fa-star"></i>
+
+        <span id="xpValue">0 XP</span>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+SCROLL 1 — NOVA
+========================================= -->
+
+<main>
+
+
+<section class="nova-section" id="nova">
+
+
+    <!-- MODULE LABEL -->
+
+    <div class="mission-label">
+
+        <span>MISSION 01</span>
+
+        <strong>COMPUTER VISION BASICS</strong>
+
+    </div>
+
+
+
+    <!-- NOVA AREA -->
+
+    <div class="nova-container">
+
+
+        <!-- LEFT INFO -->
+
+        <div class="nova-intro">
+
+            <div class="status-dot"></div>
+
+            <span class="online-text">
+                NOVA ONLINE
+            </span>
+
+
+            <h1>
+
+                Meet Your
+
+                <span>AI Vision Friend.</span>
+
+            </h1>
+
+
+            <p>
+
+                I'm NOVA. I'll teach you Computer Vision,
+                help you when you're stuck,
+                celebrate your wins and occasionally
+                make terrible jokes. 😭
+
+            </p>
+
+
+            <div class="nova-stats">
+
+                <div>
+
+                    <span>LEVEL</span>
+
+                    <strong>01</strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>MISSION</span>
+
+                    <strong>01</strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>XP</span>
+
+                    <strong id="novaXP">0</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NOVA CHARACTER -->
+
+        <div class="nova-character">
+
+
+            <div class="nova-aura"></div>
+
+
+            <div class="nova-ring ring-one"></div>
+
+            <div class="nova-ring ring-two"></div>
+
+
+            <!-- CHARACTER -->
+
+            <div class="nova-avatar">
+
+                <div class="nova-head">
+
+                    <div class="ear left"></div>
+
+                    <div class="ear right"></div>
+
+
+                    <div class="face">
+
+
+                        <div class="eye left-eye"></div>
+
+                        <div class="eye right-eye"></div>
+
+
+                        <div class="nose"></div>
+
+
+                        <div class="mouth"></div>
+
+
+                    </div>
+
+
+                    <div class="hair"></div>
+
+                </div>
+
+
+                <div class="nova-body">
+
+                    <div class="chest-core">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="nova-arm left-arm"></div>
+
+                <div class="nova-arm right-arm"></div>
+
+
+            </div>
+
+
+            <!-- FLOATING ICONS -->
+
+            <div class="floating-icon icon-one">
+
+                <i class="fa-solid fa-image"></i>
+
+            </div>
+
+
+            <div class="floating-icon icon-two">
+
+                <i class="fa-solid fa-eye"></i>
+
+            </div>
+
+
+            <div class="floating-icon icon-three">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- NOVA CHAT -->
+
+    <div class="nova-dialogue">
+
+
+        <div class="nova-name">
+
+            <i class="fa-solid fa-robot"></i>
+
+            NOVA
+
+            <span>AI LEARNING FRIEND</span>
+
+        </div>
+
+
+        <div class="dialogue-text" id="novaDialogue">
+
+            Yo! 👋
+
+            Ready to enter the Computer Vision world?
+
+            Don't worry...
+
+            I promise not to make you memorize
+            500 pages of boring theory. 😂
+
+        </div>
+
+
+        <div class="nova-actions">
+
+            <button class="nova-btn" id="startMissionBtn">
+
+                <i class="fa-solid fa-play"></i>
+
+                Start Mission
+
+            </button>
+
+
+            <button class="nova-small-btn" id="askNovaBtn">
+
+                <i class="fa-solid fa-comment"></i>
+
+                Talk to NOVA
+
+            </button>
+
+
+            <button class="nova-small-btn" id="hintBtn">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                Hint
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SCROLL INDICATOR -->
+
+    <div class="scroll-indicator">
+
+        <span>Continue your mission</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+SCROLL 2 — LEARNING MISSION
+========================================= -->
+
+<section class="mission-section" id="mission">
+
+
+    <div class="mission-header">
+
+        <span>MISSION 01</span>
+
+        <h2>
+
+            Enter the
+
+            <strong>Computer Vision World</strong>
+
+        </h2>
+
+
+        <p>
+
+            Complete every stage to unlock
+            your next mission.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- PROGRESS -->
+
+    <div class="mission-progress">
+
+
+        <div class="progress-top">
+
+            <span>MISSION PROGRESS</span>
+
+            <strong id="progressText">
+                0%
+            </strong>
+
+        </div>
+
+
+        <div class="progress-track">
+
+            <div
+                class="progress-fill"
+                id="progressFill">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- LEARNING CARDS -->
+
+    <div class="learning-cards">
+
+
+        <!-- NOTES -->
+
+        <article class="learning-card notes-card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-book-open"></i>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span>STAGE 01</span>
+
+                <h3>Notes</h3>
+
+                <p>
+
+                    Read simple explanations
+                    before working with your first images.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="card-btn"
+                onclick="openNotes()">
+
+                Open Notes
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+
+
+        <!-- VIDEOS -->
+
+        <article class="learning-card video-card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-play"></i>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span>STAGE 02</span>
+
+                <h3>Visual Lessons</h3>
+
+                <p>
+
+                    Learn Computer Vision through
+                    interactive visual explanations.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="card-btn"
+                onclick="openVideos()">
+
+                Start Lesson
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+
+
+        <!-- QUIZ -->
+
+        <article class="learning-card quiz-card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span>STAGE 03</span>
+
+                <h3>Quiz</h3>
+
+                <p>
+
+                    Test whether you actually
+                    understood the Computer Vision concept.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="card-btn"
+                onclick="openQuiz()">
+
+                Take Quiz
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+
+
+        <!-- PRACTICE -->
+
+        <article class="learning-card practice-card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-terminal"></i>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span>STAGE 04</span>
+
+                <h3>Practice</h3>
+
+                <p>
+
+                    Work with images and
+                    complete your first Computer Vision task.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="card-btn"
+                onclick="openPractice()">
+
+                Start Coding
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+
+
+        <!-- CHALLENGE -->
+
+        <article class="learning-card challenge-card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-gamepad"></i>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span>STAGE 05</span>
+
+                <h3>Challenge</h3>
+
+                <p>
+
+                    Beat NOVA's challenge
+                    and earn bonus XP.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="card-btn"
+                onclick="openChallenge()">
+
+                Accept Challenge
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- NEXT MISSION -->
+
+    <div class="next-mission">
+
+
+        <div class="next-icon">
+
+            <i class="fa-solid fa-lock"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>NEXT MISSION</span>
+
+            <h3>
+
+                Object Detection
+
+            </h3>
+
+
+            <p id="unlockText">
+
+                Complete this mission
+                to unlock the next one.
+
+            </p>
+
+        </div>
+
+
+        <button
+            id="nextMissionBtn"
+            class="next-btn"
+            disabled>
+
+            Locked
+
+            <i class="fa-solid fa-lock"></i>
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+FOOTER
+========================================= -->
+
+<footer>
+
+    <h3>NEXORA AI</h3>
+
+    <p>
+
+        Learn • Build • Innovate
+
+    </p>
+
+</footer>
+
+
+
+<!-- COMPUTER VISION JS -->
+
+<script src="computer-vision.js"></script>
+<script src="computer-vision-lessons.js"></script>
+
+
+<script type="module" src="nexora-guard.js"></script>
+</body>
+
+</html>

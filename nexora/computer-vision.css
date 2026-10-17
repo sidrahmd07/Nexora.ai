@@ -1,0 +1,1600 @@
+/* =========================================================
+   NEXORA - COMPUTER VISION BASICS
+   CLEAN CSS VERSION
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Outfit", Arial, sans-serif;
+    background: #030308;
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.grid-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(124, 58, 237, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(37, 99, 235, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    left: -200px;
+
+    border-radius: 50%;
+
+    background: #7c3aed;
+    filter: blur(180px);
+
+    opacity: 0.12;
+
+    z-index: -5;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    right: -250px;
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    filter: blur(180px);
+
+    opacity: 0.10;
+
+    z-index: -5;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CURSOR GLOW
+========================================================= */
+
+.cursor-glow {
+    position: fixed;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.16),
+            rgba(37, 99, 235, 0.05),
+            transparent 70%
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 1250px;
+
+    height: 68px;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(5, 5, 12, 0.88);
+
+    border: 1px solid rgba(168, 85, 247, 0.18);
+
+    border-radius: 20px;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.30);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #a855f7;
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo i {
+    font-size: 26px;
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(168, 85, 247, 0.55)
+        );
+}
+
+.module-name {
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+.xp-display {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 15px;
+
+    border-radius: 12px;
+
+    color: #a855f7;
+
+    background: rgba(124, 58, 237, 0.08);
+
+    border: 1px solid rgba(168, 85, 247, 0.18);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   NOVA SECTION
+========================================================= */
+
+.nova-section {
+    width: 90%;
+    max-width: 1250px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding-top: 130px;
+    padding-bottom: 80px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   MISSION LABEL
+========================================================= */
+
+.mission-label {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 35px;
+}
+
+.mission-label span {
+    color: #a855f7;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+.mission-label strong {
+    color: #555;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   NOVA CONTAINER
+========================================================= */
+
+.nova-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* =========================================================
+   NOVA INTRO
+========================================================= */
+
+.nova-intro {
+    max-width: 560px;
+}
+
+.status-dot {
+    display: inline-block;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 15px #22c55e;
+
+    margin-right: 8px;
+}
+
+.online-text {
+    color: #22c55e;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.nova-intro h1 {
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    margin: 22px 0;
+}
+
+.nova-intro h1 span {
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #7c3aed,
+            #2563eb
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.nova-intro p {
+    color: #999;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    max-width: 520px;
+}
+
+
+/* =========================================================
+   NOVA STATS
+========================================================= */
+
+.nova-stats {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.nova-stats div {
+    min-width: 95px;
+
+    padding: 14px 17px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(168, 85, 247, 0.13);
+
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+.nova-stats div:hover {
+    transform: translateY(-5px);
+
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 10px 30px rgba(124, 58, 237, 0.15);
+}
+
+.nova-stats span {
+    display: block;
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.nova-stats strong {
+    color: #a855f7;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   NOVA CHARACTER
+========================================================= */
+
+.nova-character {
+    height: 440px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nova-aura {
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.25),
+            rgba(37, 99, 235, 0.08),
+            transparent 70%
+        );
+
+    filter: blur(15px);
+
+    animation: novaAura 4s ease-in-out infinite;
+}
+
+@keyframes novaAura {
+    0%,
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   NOVA RINGS
+========================================================= */
+
+.nova-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid;
+}
+
+.ring-one {
+    width: 310px;
+    height: 310px;
+
+    border-color: rgba(168, 85, 247, 0.45);
+
+    animation: orbit 12s linear infinite;
+}
+
+.ring-two {
+    width: 390px;
+    height: 390px;
+
+    border-color: rgba(37, 99, 235, 0.22);
+
+    animation: orbitReverse 18s linear infinite;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* =========================================================
+   NOVA AVATAR
+========================================================= */
+
+.nova-avatar {
+    position: relative;
+
+    width: 190px;
+    height: 290px;
+
+    z-index: 5;
+
+    animation: novaFloat 4s ease-in-out infinite;
+}
+
+@keyframes novaFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================================
+   NOVA HEAD
+========================================================= */
+
+.nova-head {
+    position: absolute;
+
+    width: 155px;
+    height: 155px;
+
+    top: 5px;
+    left: 18px;
+}
+
+.face {
+    position: absolute;
+
+    inset: 12px;
+
+    border-radius: 48% 48% 45% 45%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8e8ff,
+            #b8b9dc
+        );
+
+    box-shadow:
+        0 0 35px rgba(168, 85, 247, 0.25);
+
+    z-index: 2;
+}
+
+.hair {
+    position: absolute;
+
+    width: 150px;
+    height: 75px;
+
+    top: 0;
+    left: 20px;
+
+    border-radius: 70px 70px 25px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17122b,
+            #432080
+        );
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   EARS
+========================================================= */
+
+.ear {
+    position: absolute;
+
+    width: 22px;
+    height: 38px;
+
+    top: 62px;
+
+    background: #b8b9dc;
+
+    border-radius: 50%;
+
+    z-index: 1;
+}
+
+.ear.left {
+    left: 5px;
+}
+
+.ear.right {
+    right: 5px;
+}
+
+
+/* =========================================================
+   EYES
+========================================================= */
+
+.eye {
+    position: absolute;
+
+    width: 12px;
+    height: 18px;
+
+    top: 65px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    box-shadow:
+        0 0 8px rgba(124, 58, 237, 0.7);
+}
+
+.left-eye {
+    left: 40px;
+}
+
+.right-eye {
+    right: 40px;
+}
+
+
+/* =========================================================
+   NOSE
+========================================================= */
+
+.nose {
+    position: absolute;
+
+    width: 7px;
+    height: 12px;
+
+    top: 86px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #9697ba;
+}
+
+
+/* =========================================================
+   MOUTH
+========================================================= */
+
+.mouth {
+    position: absolute;
+
+    width: 35px;
+    height: 14px;
+
+    top: 108px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-bottom: 3px solid #49306f;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   NOVA BODY
+========================================================= */
+
+.nova-body {
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    left: 22px;
+    top: 140px;
+
+    border-radius: 45px 45px 25px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17142a,
+            #0c0b17
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.3);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================================
+   CHEST CORE
+========================================================= */
+
+.chest-core {
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    top: 38px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(168, 85, 247, 0.3),
+            rgba(37, 99, 235, 0.1)
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.5);
+
+    box-shadow:
+        0 0 30px rgba(124, 58, 237, 0.35);
+
+    animation: corePulse 2.5s infinite;
+}
+
+.chest-core i {
+    color: #a855f7;
+
+    font-size: 23px;
+}
+
+@keyframes corePulse {
+    0%,
+    100% {
+        box-shadow:
+            0 0 20px rgba(124, 58, 237, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 45px rgba(124, 58, 237, 0.6);
+    }
+}
+
+
+/* =========================================================
+   ARMS
+========================================================= */
+
+.nova-arm {
+    position: absolute;
+
+    width: 32px;
+    height: 100px;
+
+    top: 155px;
+
+    border-radius: 20px;
+
+    background: #151226;
+
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.left-arm {
+    left: 0;
+
+    transform: rotate(12deg);
+}
+
+.right-arm {
+    right: 0;
+
+    transform: rotate(-12deg);
+}
+
+
+/* =========================================================
+   FLOATING ICONS
+========================================================= */
+
+.floating-icon {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: #a855f7;
+
+    background: rgba(10, 8, 20, 0.85);
+
+    border: 1px solid rgba(168, 85, 247, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    z-index: 8;
+}
+
+.icon-one {
+    top: 75px;
+    left: 15%;
+
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.icon-two {
+    top: 120px;
+    right: 12%;
+
+    color: #60a5fa;
+
+    animation:
+        floatIcon 4s ease-in-out infinite 0.5s;
+}
+
+.icon-three {
+    bottom: 80px;
+    left: 18%;
+
+    color: #818cf8;
+
+    animation:
+        floatIcon 3.5s ease-in-out infinite 1s;
+}
+
+@keyframes floatIcon {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+
+/* =========================================================
+   NOVA DIALOGUE
+========================================================= */
+
+.nova-dialogue {
+    margin-top: 35px;
+
+    padding: 24px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.07),
+            rgba(37, 99, 235, 0.035)
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.18);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.nova-name {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #a855f7;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.nova-name span {
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-left: 5px;
+}
+
+.dialogue-text {
+    max-width: 850px;
+
+    margin: 15px 0;
+
+    color: #ddd;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+
+    transition: opacity 0.2s ease;
+}
+
+.nova-actions {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.nova-btn,
+.nova-small-btn {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.nova-btn {
+    padding: 12px 22px;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.2);
+}
+
+.nova-small-btn {
+    padding: 11px 17px;
+
+    color: #bbb;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(168, 85, 247, 0.15);
+}
+
+.nova-btn:hover,
+.nova-small-btn:hover {
+    transform: translateY(-4px);
+}
+
+.nova-btn:hover {
+    box-shadow:
+        0 12px 35px rgba(124, 58, 237, 0.4);
+}
+
+.nova-small-btn:hover {
+    color: #fff;
+
+    border-color: #7c3aed;
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #555;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    animation: scrollHint 2s ease-in-out infinite;
+}
+
+.scroll-indicator i {
+    color: #7c3aed;
+}
+
+@keyframes scrollHint {
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            translateY(8px);
+    }
+}
+
+
+/* =========================================================
+   MISSION SECTION
+========================================================= */
+
+.mission-section {
+    width: 90%;
+    max-width: 1250px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 110px 0 80px;
+}
+
+
+/* =========================================================
+   MISSION HEADER
+========================================================= */
+
+.mission-header {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.mission-header > span {
+    color: #a855f7;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.mission-header h2 {
+    font-size: 48px;
+
+    margin: 15px 0;
+}
+
+.mission-header h2 strong {
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #7c3aed,
+            #2563eb
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.mission-header p {
+    color: #888;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.mission-progress {
+    max-width: 850px;
+
+    margin: 0 auto 45px;
+}
+
+.progress-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.progress-top strong {
+    color: #a855f7;
+}
+
+.progress-track {
+    height: 9px;
+
+    background: #0b0b12;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(168, 85, 247, 0.1);
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #a855f7,
+            #2563eb
+        );
+
+    box-shadow:
+        0 0 18px rgba(124, 58, 237, 0.4);
+
+    transition: width 0.8s ease;
+}
+
+
+/* =========================================================
+   LEARNING CARDS
+========================================================= */
+
+.learning-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 16px;
+}
+
+.learning-card {
+    min-height: 285px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(124, 58, 237, 0.025)
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.12);
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.learning-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    top: -80px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(124, 58, 237, 0.12);
+
+    transition: 0.5s ease;
+}
+
+.learning-card:hover::before {
+    transform: scale(1.8);
+}
+
+.learning-card:hover {
+    transform: translateY(-10px);
+
+    border-color:
+        rgba(168, 85, 247, 0.5);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(124, 58, 237, 0.12);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #a855f7;
+
+    background:
+        rgba(124, 58, 237, 0.1);
+
+    border:
+        1px solid rgba(168, 85, 247, 0.15);
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.card-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.card-content span {
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.card-content h3 {
+    font-size: 21px;
+
+    margin: 8px 0 10px;
+}
+
+.card-content p {
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+.card-btn {
+    margin-top: auto;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid rgba(168, 85, 247, 0.15);
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #bbb;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.card-btn:hover {
+    color: #fff;
+
+    border-color: #7c3aed;
+
+    background:
+        rgba(124, 58, 237, 0.1);
+}
+
+.card-btn i {
+    margin-left: 6px;
+}
+
+
+/* =========================================================
+   NEXT MISSION
+========================================================= */
+
+.next-mission {
+    max-width: 850px;
+
+    margin: 50px auto 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.06),
+            rgba(37, 99, 235, 0.035)
+        );
+
+    border:
+        1px solid rgba(168, 85, 247, 0.15);
+
+    border-radius: 20px;
+}
+
+.next-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #0d0d14;
+
+    color: #555;
+}
+
+.next-mission > div:nth-child(2) {
+    flex: 1;
+}
+
+.next-mission span {
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.next-mission h3 {
+    margin: 6px 0;
+
+    font-size: 20px;
+}
+
+.next-mission p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.next-btn {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #11111a;
+
+    color: #555;
+
+    font-family: inherit;
+
+    font-weight: 700;
+}
+
+.next-btn:not(:disabled) {
+    color: #fff;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    box-shadow:
+        0 0 25px rgba(124, 58, 237, 0.25);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 40px;
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(168, 85, 247, 0.12);
+}
+
+footer h3 {
+    color: #a855f7;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .learning-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .nova-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nova-intro {
+        max-width: 700px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .nova-stats {
+        justify-content: center;
+    }
+
+    .nova-intro p {
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        width: 94%;
+
+        padding: 0 16px;
+    }
+
+    .module-name {
+        display: none;
+    }
+
+    .xp-display {
+        padding: 8px 11px;
+
+        font-size: 12px;
+    }
+
+    .nova-section {
+        width: 92%;
+
+        padding-top: 120px;
+    }
+
+    .nova-intro h1 {
+        font-size: 42px;
+    }
+
+    .nova-intro p {
+        font-size: 15px;
+    }
+
+    .nova-character {
+        height: 360px;
+
+        transform: scale(0.78);
+
+        margin: -25px 0;
+    }
+
+    .nova-dialogue {
+        padding: 20px;
+    }
+
+    .nova-actions {
+        flex-direction: column;
+    }
+
+    .nova-btn,
+    .nova-small-btn {
+        width: 100%;
+    }
+
+    .mission-section {
+        width: 92%;
+
+        padding-top: 90px;
+    }
+
+    .mission-header h2 {
+        font-size: 35px;
+    }
+
+    .learning-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .next-mission {
+        flex-wrap: wrap;
+    }
+
+    .next-btn {
+        width: 100%;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .nova-intro h1 {
+        font-size: 35px;
+    }
+
+    .mission-header h2 {
+        font-size: 30px;
+    }
+
+    .nova-stats {
+        gap: 6px;
+    }
+
+    .nova-stats div {
+        min-width: 80px;
+
+        padding: 11px 10px;
+    }
+
+}
