@@ -13,6 +13,7 @@
 
 Nexora is a futuristic, student-focused learning platform that makes technology education more engaging, accessible, and organized.
 
+
 The platform aims to help beginners explore emerging technologies, learn at their own pace, practice their skills, and prepare for future career opportunities.
 
 With an immersive interface and structured learning journeys, Nexora brings technology learning into one interactive experience.
