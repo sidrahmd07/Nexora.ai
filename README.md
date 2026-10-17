@@ -150,9 +150,13 @@ We are a team passionate about technology, innovation, and creating engaging lea
 
 Team Members
 1	Sidrah Mohammed(Founder)
+
 2	Varri Indulalitha
+
 3	Yejjipurapu Vasavi
+
 4	Yalamanchili Jnapika Sneha Sree
+
 5	Vandrangi Bhuvana Kruthi
 
 Together, we are Team Nexora — learning, building, and innovating for the future. 💜
