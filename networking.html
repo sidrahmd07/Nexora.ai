@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA // NETWORKING</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./networking.css">
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+<body>
+
+    <!-- ================= BOOT ================= -->
+
+    <div id="bootScreen" class="boot-screen">
+
+        <div class="boot-core">
+
+            <div class="boot-ring ring-one"></div>
+            <div class="boot-ring ring-two"></div>
+            <div class="boot-ring ring-three"></div>
+
+            <div class="core-dot"></div>
+
+        </div>
+
+        <div class="boot-title">
+            NEXORA // NETWORKING
+        </div>
+
+        <div class="boot-status">
+            INITIALIZING NETWORK SYSTEM...
+        </div>
+
+    </div>
+
+
+    <!-- ================= BACKGROUND ================= -->
+
+    <canvas id="networkCanvas"></canvas>
+
+    <div class="grid"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <span class="brand-main">
+                    NEXORA
+                </span>
+
+                <span class="brand-sub">
+                    // NETWORKING
+                </span>
+
+            </div>
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section
+            id="introScreen"
+            class="screen intro-screen active"
+        >
+
+            <div class="network-core">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+
+                <div class="core-dot"></div>
+
+                <span class="signal signal-one"></span>
+                <span class="signal signal-two"></span>
+                <span class="signal signal-three"></span>
+                <span class="signal signal-four"></span>
+
+            </div>
+
+            <p class="eyebrow">
+                NEXORA CYBER // MODULE 02
+            </p>
+
+            <h1>
+                NETWORKING
+            </h1>
+
+            <p class="intro-text">
+                Learn how computers communicate through networks,
+                IP addresses, packets, clients, servers, protocols
+                and ports.
+            </p>
+
+
+            <div class="intro-actions">
+
+                <button
+                    id="enterNetworking"
+                    class="primary-btn"
+                >
+
+                    ENTER NETWORKING
+
+                    <span>→</span>
+
+                </button>
+
+
+                <button
+                    id="backToRouteMap"
+                    class="secondary-btn"
+                >
+
+                    ← BACK TO ROUTE MAP
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LEVEL SELECT ================= -->
+
+        <section
+            id="levelScreen"
+            class="screen level-screen"
+        >
+
+            <div class="level-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        MODULE 02 // LEARNING PATH
+                    </p>
+
+                    <h2>
+                        NETWORKING LEVELS
+                    </h2>
+
+                    <p class="level-subtitle">
+                        Complete each stage to unlock the next stage.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="backToIntro"
+                    class="small-btn"
+                >
+                    ← BACK
+                </button>
+
+            </div>
+
+
+            <div class="level-map">
+
+                <div class="level-line"></div>
+
+
+                <!-- BASIC -->
+
+                <button
+                    id="basicLevel"
+                    class="level-card active-level"
+                >
+
+                    <div class="level-number">
+                        01
+                    </div>
+
+                    <div class="level-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        BASIC
+                    </h3>
+
+                    <p>
+                        Networking foundations
+                    </p>
+
+                    <span
+                        class="level-status"
+                        id="basicStatus"
+                    >
+                        AVAILABLE
+                    </span>
+
+                </button>
+
+
+                <!-- INTERMEDIATE -->
+
+                <button
+                    id="intermediateLevel"
+                    class="level-card locked-level"
+                >
+
+                    <div class="level-number">
+                        02
+                    </div>
+
+                    <div class="level-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        INTERMEDIATE
+                    </h3>
+
+                    <p>
+                        Apply networking concepts
+                    </p>
+
+                    <span
+                        class="level-status"
+                        id="intermediateStatus"
+                    >
+                        🔒 LOCKED
+                    </span>
+
+                </button>
+
+
+                <!-- HIGHER -->
+
+                <button
+                    id="higherLevel"
+                    class="level-card locked-level"
+                >
+
+                    <div class="level-number">
+                        03
+                    </div>
+
+                    <div class="level-icon">
+                        ⬡
+                    </div>
+
+                    <h3>
+                        ADVANCED
+                    </h3>
+
+                    <p>
+                        Advanced networking thinking
+                    </p>
+
+                    <span
+                        class="level-status"
+                        id="higherStatus"
+                    >
+                        🔒 LOCKED
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <div class="level-info">
+
+                <span>
+                    LEARNING FLOW
+                </span>
+
+                <strong>
+                    LEARN → PRACTICE → COMPLETE → UNLOCK
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LEARNING SCREEN ================= -->
+
+        <section
+            id="learningScreen"
+            class="screen learning-screen"
+        >
+
+            <div class="learning-topbar">
+
+                <button
+                    id="backToLevels"
+                    class="small-btn"
+                >
+                    ← LEVELS
+                </button>
+
+
+                <div class="current-level-name">
+
+                    <span id="currentLevelTag">
+                        BASIC LEVEL
+                    </span>
+
+                    <h2 id="currentLevelTitle">
+                        NETWORKING BASICS
+                    </h2>
+
+                </div>
+
+
+                <div class="level-progress">
+
+                    <span id="levelProgressText">
+                        0 / 5
+                    </span>
+
+                    <div class="level-progress-track">
+
+                        <span id="levelProgressBar"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-grid">
+
+                <!-- ================= STUDY PANEL ================= -->
+
+                <article class="study-card">
+
+                    <div class="card-label-row">
+
+                        <span
+                            class="card-number"
+                            id="studyNumber"
+                        >
+                            01
+                        </span>
+
+                        <span class="card-label">
+                            STUDY FIRST
+                        </span>
+
+                    </div>
+
+
+                    <h3 id="studyTitle">
+                        COMPUTER NETWORK
+                    </h3>
+
+
+                    <p
+                        id="studyDescription"
+                        class="study-description"
+                    ></p>
+
+
+                    <div class="study-section">
+
+                        <div class="study-heading">
+                            WHAT YOU NEED TO KNOW
+                        </div>
+
+                        <p id="studyDetails"></p>
+
+                    </div>
+
+
+                    <div class="key-points">
+
+                        <div class="study-heading">
+                            KEY POINTS
+                        </div>
+
+                        <ul id="studyPoints"></ul>
+
+                    </div>
+
+
+                    <div class="task-connection">
+
+                        <span>
+                            THIS STUDY MATTER IS FOR
+                        </span>
+
+                        <strong id="studyTaskName">
+                            TASK 01
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= TASK PANEL ================= -->
+
+                <article class="task-card">
+
+                    <div class="task-top">
+
+                        <div>
+
+                            <p class="eyebrow">
+
+                                <span id="taskLevelName">
+                                    BASIC
+                                </span>
+
+                                //
+
+                                TASK
+
+                                <span id="taskNumber">
+                                    01
+                                </span>
+
+                                / 05
+
+                            </p>
+
+
+                            <h3 id="taskTitle">
+                                TASK LOADING...
+                            </h3>
+
+                        </div>
+
+
+                        <div class="percent-box">
+
+                            <strong id="progressText">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="task-topic">
+
+                        <span>
+                            CONCEPT
+                        </span>
+
+                        <strong id="conceptUsed">
+                            COMPUTER NETWORK
+                        </strong>
+
+                    </div>
+
+
+                    <p
+                        id="taskDescription"
+                        class="task-description"
+                    ></p>
+
+
+                    <div class="hint-box">
+
+                        <div class="hint-title">
+                            ◈ HINT
+                        </div>
+
+                        <p id="hintText"></p>
+
+                    </div>
+
+
+                    <label class="editor-label">
+                        YOUR PYTHON CODE
+                    </label>
+
+
+                    <textarea
+                        id="codeEditor"
+                        spellcheck="false"
+                        autocomplete="off"
+                        placeholder="# Write your Python answer here..."
+                    ></textarea>
+
+
+                    <div
+                        id="feedback"
+                        class="feedback"
+                    ></div>
+
+
+                    <div class="task-actions">
+
+                        <button
+                            id="submitBtn"
+                            class="primary-btn"
+                        >
+                            SUBMIT TASK
+                        </button>
+
+                        <button
+                            id="clearBtn"
+                            class="secondary-btn"
+                        >
+                            CLEAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- ================= TASK MAP ================= -->
+
+            <div class="task-map">
+
+                <div class="task-map-title">
+
+                    <span id="taskMapLevel">
+                        BASIC
+                    </span>
+
+                    TASK PATH
+
+                </div>
+
+
+                <div
+                    id="taskDots"
+                    class="task-dots"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COMPLETION ================= -->
+
+        <section
+            id="completionScreen"
+            class="screen completion-screen"
+        >
+
+            <div class="completion-core">
+                ✓
+            </div>
+
+
+            <p class="eyebrow">
+                LEVEL COMPLETE
+            </p>
+
+
+            <h2 id="completionTitle">
+                BASIC LEVEL COMPLETE
+            </h2>
+
+
+            <p id="completionDescription">
+                You completed the Networking Basic level.
+            </p>
+
+
+            <div class="unlock-message">
+
+                <span>
+                    NEXT LEVEL
+                </span>
+
+                <strong id="nextLevelText">
+                    INTERMEDIATE UNLOCKED
+                </strong>
+
+            </div>
+
+
+            <div class="completion-actions">
+
+                <button
+                    id="continueLevelBtn"
+                    class="primary-btn"
+                >
+                    CONTINUE
+                </button>
+
+                <button
+                    id="reviewLevelBtn"
+                    class="secondary-btn"
+                >
+                    REVIEW LEVEL
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         RETURN TO CYBER TRANSITION
+         ========================================= -->
+
+    <div
+        id="routeTransition"
+        class="route-transition"
+    >
+
+        <div class="route-core"></div>
+
+        <div class="route-ring route-ring-1"></div>
+        <div class="route-ring route-ring-2"></div>
+        <div class="route-ring route-ring-3"></div>
+
+        <div class="route-transition-text">
+            RETURNING TO CYBER NETWORK
+        </div>
+
+    </div>
+
+
+    <script src="./networking.js"></script>
+
+<script type="module" src="nexora-guard.js"></script>
+</body>
+</html>

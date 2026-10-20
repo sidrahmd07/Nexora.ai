@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Deep Learning</title>
+
+    <meta name="description"
+          content="Learn Deep Learning with NEXORA AI Academy.">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="deeplearning.css">
+
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+<body>
+
+<div class="grid-bg"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-brain"></i>
+
+        <span>NEXORA AI</span>
+
+    </div>
+
+    <nav>
+
+        <a href="aiml.html">AI Academy</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#quiz">Quiz</a>
+
+    </nav>
+
+    <button class="gold-btn"
+            onclick="goToAcademy()">
+
+        Dashboard
+
+    </button>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="dl-hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+
+            <i class="fa-solid fa-brain"></i>
+
+            DEEP LEARNING
+
+        </div>
+
+        <h1>
+
+            Build Intelligent
+
+            <span>Neural Networks</span>
+
+        </h1>
+
+        <p>
+
+            Learn how neural networks learn from data,
+            recognize complex patterns and power modern
+            Artificial Intelligence.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="gold-btn"
+                    onclick="startLearning()">
+
+                <i class="fa-solid fa-play"></i>
+
+                Start Learning
+
+            </button>
+
+            <button class="glass-btn"
+                    onclick="scrollToLessons()">
+
+                Explore Lessons
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="ai-core">
+
+        <div class="core-ring"></div>
+        <div class="core-ring two"></div>
+        <div class="core-ring three"></div>
+
+        <div class="brain-core">
+
+            <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- COURSE OVERVIEW -->
+
+<section class="overview">
+
+    <div class="section-title">
+
+        <span>YOUR LEARNING PATH</span>
+
+        <h2>Deep Learning</h2>
+
+        <p>
+            Move from basic neural networks to modern
+            deep learning architectures.
+        </p>
+
+    </div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-book"></i>
+
+            <h3>10</h3>
+
+            <p>Lessons</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-network-wired"></i>
+
+            <h3>5+</h3>
+
+            <p>Architectures</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>10</h3>
+
+            <p>Quiz Questions</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-trophy"></i>
+
+            <h3>1</h3>
+
+            <p>Completion Goal</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROGRESS -->
+
+<section class="progress-section">
+
+    <div class="progress-card">
+
+        <div class="progress-info">
+
+            <div>
+
+                <span>YOUR PROGRESS</span>
+
+                <h3 id="progressText">
+                    0 / 10 Lessons Completed
+                </h3>
+
+            </div>
+
+            <strong id="progressPercent">
+                0%
+            </strong>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div class="progress-fill"
+                 id="progressFill">
+            </div>
+
+        </div>
+
+        <p id="progressMessage">
+            Start your Deep Learning journey.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- LESSONS -->
+
+<section class="lessons"
+         id="lessons">
+
+    <div class="section-title">
+
+        <span>DEEP LEARNING CURRICULUM</span>
+
+        <h2>Deep Learning Lessons</h2>
+
+        <p>
+            Complete each lesson to unlock the next one.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-grid">
+
+
+        <!-- 01 -->
+
+        <div class="lesson-card active"
+             data-lesson="1">
+
+            <div class="lesson-number">01</div>
+
+            <div class="lesson-icon">🧠</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    FUNDAMENTALS
+                </span>
+
+                <h3>
+                    Introduction to Deep Learning
+                </h3>
+
+                <p>
+                    Understand Deep Learning and how it
+                    differs from traditional Machine Learning.
+                </p>
+
+                <div class="topic-tags">
+                    <span>AI</span>
+                    <span>ML</span>
+                    <span>DL</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(1)">
+                Start
+            </button>
+
+        </div>
+
+
+
+        <!-- 02 -->
+
+        <div class="lesson-card locked"
+             data-lesson="2">
+
+            <div class="lesson-number">02</div>
+
+            <div class="lesson-icon">🔗</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    CORE CONCEPT
+                </span>
+
+                <h3>
+                    Neural Networks
+                </h3>
+
+                <p>
+                    Learn neurons, layers, weights and
+                    the structure of neural networks.
+                </p>
+
+                <div class="topic-tags">
+                    <span>Neurons</span>
+                    <span>Layers</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(2)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 03 -->
+
+        <div class="lesson-card locked"
+             data-lesson="3">
+
+            <div class="lesson-number">03</div>
+
+            <div class="lesson-icon">⚡</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    ACTIVATION
+                </span>
+
+                <h3>
+                    Activation Functions
+                </h3>
+
+                <p>
+                    Understand ReLU, Sigmoid and Softmax
+                    activation functions.
+                </p>
+
+                <div class="topic-tags">
+                    <span>ReLU</span>
+                    <span>Sigmoid</span>
+                    <span>Softmax</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(3)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 04 -->
+
+        <div class="lesson-card locked"
+             data-lesson="4">
+
+            <div class="lesson-number">04</div>
+
+            <div class="lesson-icon">➡️</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    COMPUTATION
+                </span>
+
+                <h3>
+                    Forward Propagation
+                </h3>
+
+                <p>
+                    Learn how inputs move through a neural
+                    network to generate predictions.
+                </p>
+
+                <div class="topic-tags">
+                    <span>Weights</span>
+                    <span>Bias</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(4)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 05 -->
+
+        <div class="lesson-card locked"
+             data-lesson="5">
+
+            <div class="lesson-number">05</div>
+
+            <div class="lesson-icon">📉</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    ERROR
+                </span>
+
+                <h3>
+                    Loss Functions
+                </h3>
+
+                <p>
+                    Learn how neural networks measure
+                    prediction errors.
+                </p>
+
+                <div class="topic-tags">
+                    <span>MSE</span>
+                    <span>Cross Entropy</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(5)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 06 -->
+
+        <div class="lesson-card locked"
+             data-lesson="6">
+
+            <div class="lesson-number">06</div>
+
+            <div class="lesson-icon">🔄</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    LEARNING
+                </span>
+
+                <h3>
+                    Backpropagation
+                </h3>
+
+                <p>
+                    Understand gradients and how neural
+                    networks learn from errors.
+                </p>
+
+                <div class="topic-tags">
+                    <span>Gradients</span>
+                    <span>Backprop</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(6)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 07 -->
+
+        <div class="lesson-card locked"
+             data-lesson="7">
+
+            <div class="lesson-number">07</div>
+
+            <div class="lesson-icon">🚀</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    OPTIMIZATION
+                </span>
+
+                <h3>
+                    Optimizers
+                </h3>
+
+                <p>
+                    Learn Gradient Descent, learning rate
+                    and Adam optimizer.
+                </p>
+
+                <div class="topic-tags">
+                    <span>Gradient Descent</span>
+                    <span>Adam</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(7)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 08 -->
+
+        <div class="lesson-card locked"
+             data-lesson="8">
+
+            <div class="lesson-number">08</div>
+
+            <div class="lesson-icon">👁️</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    COMPUTER VISION
+                </span>
+
+                <h3>
+                    Convolutional Neural Networks
+                </h3>
+
+                <p>
+                    Learn convolution, filters and pooling
+                    for image understanding.
+                </p>
+
+                <div class="topic-tags">
+                    <span>CNN</span>
+                    <span>Filters</span>
+                    <span>Pooling</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(8)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 09 -->
+
+        <div class="lesson-card locked"
+             data-lesson="9">
+
+            <div class="lesson-number">09</div>
+
+            <div class="lesson-icon">💬</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    SEQUENTIAL DATA
+                </span>
+
+                <h3>
+                    RNNs & LSTMs
+                </h3>
+
+                <p>
+                    Understand neural networks designed
+                    for sequential and time-series data.
+                </p>
+
+                <div class="topic-tags">
+                    <span>RNN</span>
+                    <span>LSTM</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(9)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+
+
+        <!-- 10 -->
+
+        <div class="lesson-card locked"
+             data-lesson="10">
+
+            <div class="lesson-number">10</div>
+
+            <div class="lesson-icon">✨</div>
+
+            <div class="lesson-content">
+
+                <span class="lesson-label">
+                    MODERN AI
+                </span>
+
+                <h3>
+                    Transformers
+                </h3>
+
+                <p>
+                    Learn attention and the foundation
+                    behind modern AI language models.
+                </p>
+
+                <div class="topic-tags">
+                    <span>Attention</span>
+                    <span>Transformers</span>
+                </div>
+
+            </div>
+
+            <button class="lesson-btn"
+                    onclick="openLesson(10)">
+                🔒 Locked
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- QUIZ -->
+
+<section class="quiz-section"
+         id="quiz">
+
+    <div class="section-title">
+
+        <span>TEST YOUR KNOWLEDGE</span>
+
+        <h2>Deep Learning Quiz</h2>
+
+        <p>
+            Complete all lessons before attempting
+            the final assessment.
+        </p>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="quiz-icon">
+
+            <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+        <h3>
+            Final Deep Learning Assessment
+        </h3>
+
+        <p>
+            Test your understanding of neural networks,
+            CNNs, RNNs, optimization and Transformers.
+        </p>
+
+        <button class="gold-btn"
+                id="quizButton"
+                onclick="startQuiz()">
+
+            🔒 Complete Lessons First
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT MODULE -->
+
+<section class="next-module">
+
+    <div class="next-card">
+
+        <div>
+
+            <span>NEXT STAGE</span>
+
+            <h2>
+                Computer Vision 👁️
+            </h2>
+
+            <p>
+                Complete Deep Learning to unlock
+                Computer Vision.
+            </p>
+
+        </div>
+
+        <button class="glass-btn"
+                id="nextButton"
+                onclick="unlockComputerVision()">
+
+            🔒 Locked
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <h3>NEXORA AI</h3>
+
+    <p>
+        Learn • Build • Innovate
+    </p>
+
+</footer>
+
+
+<script src="deeplearning.js"></script>
+
+<script type="module" src="nexora-guard.js"></script>
+</body>
+
+</html>

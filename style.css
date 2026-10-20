@@ -1,0 +1,6916 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* =========================================
+   NEXORA DEMON VIOLET THEME
+   BLACK × VIOLET × ELECTRIC BLUE
+========================================= */
+
+:root{
+
+    --black:#030006;
+
+    --dark-purple:#0B0015;
+
+    --purple:#7C3AED;
+
+    --neon-purple:#A855F7;
+
+    --dark-blue:#06142E;
+
+    --blue:#2563EB;
+
+    --electric-blue:#3B82F6;
+
+    --cyan:#22D3EE;
+
+    --white:#F5F3FF;
+
+    --text:#B8B2C8;
+
+    --border:rgba(168,85,247,.18);
+
+    --purple-glow:rgba(124,58,237,.30);
+
+    --blue-glow:rgba(37,99,235,.25);
+
+}
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Outfit',sans-serif;
+    background:#030006;
+    color:#F5F3FF;
+    overflow-x:hidden;
+
+}
+
+/* =========================================
+   NEXORA DEMON BACKGROUND
+========================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    top:-250px;
+    left:-250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,58,237,.30),
+            rgba(88,28,135,.15),
+            transparent 70%
+        );
+
+    filter:blur(110px);
+
+    z-index:-2;
+
+    pointer-events:none;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:650px;
+    height:650px;
+
+    right:-250px;
+    bottom:-250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.28),
+            rgba(30,64,175,.12),
+            transparent 70%
+        );
+
+    filter:blur(120px);
+
+    z-index:-2;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+
+/* ==========================
+LOADER
+========================== */
+
+
+#loader{
+
+    position:fixed;
+    inset:0;
+
+    background:#030303;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+
+    z-index:9999;
+
+}
+
+
+.loader-logo{
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    color:#A855F7;
+
+    font-size:35px;
+
+}
+
+
+.loader-logo i{
+
+    font-size:40px;
+
+}
+
+
+.loader-line{
+
+    width:180px;
+    height:4px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+    90deg,
+    #A855F7,
+    white,
+    #A855F7
+    );
+
+    animation:loader 1.5s infinite;
+
+}
+
+
+@keyframes loader{
+
+    50%{
+        transform:scaleX(1);
+    }
+
+    0%,100%{
+        transform:scaleX(.3);
+    }
+
+}
+
+
+/* =========================================
+   DEMON GLASS NAVBAR
+========================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+    height:70px;
+
+    padding:0 35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10,0,20,.78),
+            rgba(3,8,25,.72)
+        );
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(168,85,247,.20);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.45),
+        0 0 25px rgba(124,58,237,.08);
+
+    border-radius:18px;
+
+    z-index:1000;
+}
+
+
+
+
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#A855F7;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+
+
+.logo i{
+
+    font-size:28px;
+
+}
+
+
+
+
+
+.navbar ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+
+
+.navbar a{
+
+    color:#9692A5;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+
+    color:#A855F7;
+
+    text-shadow:
+        0 0 12px rgba(168,85,247,.55);
+
+}
+
+
+
+.navbar a:hover,
+.navbar a.active{
+
+    color:#A855F7;
+
+}
+
+
+
+/* =========================================
+   DEMON PRIMARY BUTTON
+========================================= */
+
+.gold-btn{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #2563EB
+        );
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+        0 0 18px rgba(124,58,237,.22);
+
+}
+
+.gold-btn:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 10px 30px rgba(124,58,237,.35),
+        0 0 25px rgba(37,99,235,.18);
+
+}
+
+.glass-btn{
+
+    padding:12px 25px;
+
+    background:
+        rgba(124,58,237,.06);
+
+    border:1px solid rgba(168,85,247,.25);
+
+    color:#F5F3FF;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.glass-btn:hover{
+
+    color:#A855F7;
+
+    border-color:#A855F7;
+
+    background:
+        rgba(124,58,237,.12);
+
+    box-shadow:
+        0 0 22px rgba(124,58,237,.18);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
+   START ANIMATION
+====================================== */
+
+.nx-animation.nx-start{
+
+    opacity:1;
+
+}
+
+
+/* N enters */
+
+.nx-animation.nx-start .n-letter{
+
+    animation:nxN 1.2s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+
+/* X enters */
+
+.nx-animation.nx-start .x-letter{
+
+    animation:nxX 1.2s cubic-bezier(.22,1,.36,1) .35s forwards;
+
+}
+
+
+/* ======================================
+   N
+====================================== */
+
+@keyframes nxN{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateX(-80px) scale(.8);
+
+    }
+
+    60%{
+
+        opacity:1;
+
+        transform:translateX(8px) scale(1.05);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateX(0) scale(1);
+
+    }
+
+}
+
+
+/* ======================================
+   X
+====================================== */
+
+@keyframes nxX{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateX(80px) scale(.8);
+
+    }
+
+    60%{
+
+        opacity:1;
+
+        transform:translateX(-8px) scale(1.05);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateX(0) scale(1);
+
+    }
+
+}
+
+
+/* ==========================
+HERO SECTION
+========================== */
+
+
+.hero{
+
+    min-height:100vh;
+
+    padding:140px 8% 80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:120px;
+
+    position:relative;
+
+}
+
+
+
+.hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-1;
+
+}
+
+
+
+.grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(#ffffff08 1px,transparent 1px),
+
+    linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image:linear-gradient(to bottom,black,transparent);
+
+}
+
+
+
+
+
+.hero-content{
+
+    max-width:650px;
+
+}
+
+
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#A855F715;
+
+    color:#A855F7;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.hero h1{
+
+    font-size:70px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero h1 span{
+
+    color:#A855F7;
+
+}
+
+
+
+
+.hero p{
+
+    color:#aaa;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+
+
+
+.hero-stats{
+
+    display:flex;
+
+    gap:50px;
+
+}
+
+
+
+.hero-stats h2{
+
+    font-size:35px;
+
+    color:#A855F7;
+
+}
+
+
+
+.hero-stats p{
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* ==========================
+ABOUT SECTION
+========================== */
+
+
+.about-section{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+}
+
+
+
+.about-section.show{
+
+    display:block;
+
+    animation:fade .6s ease;
+
+}
+
+
+
+
+.section-header{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto auto 60px;
+
+}
+
+
+
+.section-header span{
+
+    color:#A855F7;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+}
+
+
+
+.section-header h2{
+
+    font-size:50px;
+
+    margin:20px 0;
+
+}
+
+
+
+.section-header h2 span{
+
+    color:#A855F7;
+
+}
+
+
+
+.section-header p{
+
+    color:#aaa;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+
+
+
+
+.about-card{
+
+
+    background:#ffffff05;
+
+    border:1px solid #ffffff10;
+
+    border-radius:18px;
+
+     padding:18px;
+    min-height:180px;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.about-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#A855F7;
+
+}
+
+
+
+
+
+.about-icon{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:#A855F715;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.about-icon i{
+
+    color:#A855F7;
+
+    font-size:20px;
+
+}
+
+
+
+.about-card h3{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.about-card p{
+
+    color:#aaa;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.about-highlight{
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.highlight-box{
+
+
+    max-width:850px;
+
+    text-align:center;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #A855F710,
+
+    #ffffff05
+
+    );
+
+
+    border:1px solid #A855F725;
+
+
+}
+
+
+
+.highlight-box h2{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.highlight-box p{
+
+    color:#aaa;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+ 
+/* ==========================
+FEATURES SECTION
+========================== */
+
+
+.features-section{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+}
+
+
+
+.features-section.show{
+
+    display:block;
+
+    animation:fade .6s ease;
+
+}
+
+
+
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+
+
+
+
+.feature-card{
+
+
+    background:#ffffff05;
+
+    border:1px solid #ffffff12;
+
+    border-radius:18px;
+
+     padding:18px;
+    min-height:175px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+
+    height:150px;
+
+    background:#A855F715;
+
+    border-radius:50%;
+
+    top:-80px;
+
+    right:-80px;
+
+    transition:.4s;
+
+}
+
+
+
+
+.feature-card:hover::before{
+
+    transform:scale(1.4);
+
+}
+
+
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#A855F7;
+
+}
+
+
+
+.feature-icon{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:14px;
+
+    background:#A855F715;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.feature-icon i{
+
+    color:#A855F7;
+
+    font-size:20px;
+
+}
+
+
+
+.feature-card h3{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.feature-card p{
+
+    color:#aaa;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+
+
+.feature-card span{
+
+    color:#A855F7;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.feature-panel{
+
+
+    margin-top:45px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:#ffffff05;
+
+    border:1px solid #ffffff12;
+
+
+}
+
+
+
+
+
+.feature-panel h2{
+
+    font-size:32px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.feature-panel p{
+
+    color:#aaa;
+
+}
+
+
+
+
+.feature-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+
+
+.feature-list div{
+
+    padding:14px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    background:#ffffff08;
+
+    transition:.3s;
+
+}
+
+
+
+.feature-list div:hover{
+
+    background:#A855F715;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+TEAM SECTION
+========================== */
+
+
+
+.team-section{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+}
+
+
+
+.team-section.show{
+
+    display:block;
+
+    animation:fade .6s ease;
+
+}
+
+
+
+
+
+
+/* FOUNDER */
+
+
+
+
+.founder-card{
+
+
+    max-width:900px;
+
+    margin:0 auto 50px;
+
+    padding:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #A855F710,
+
+    #ffffff05
+
+    );
+
+
+    border:1px solid #A855F730;
+
+    border-radius:25px;
+
+
+}
+
+
+
+
+.founder-icon{
+
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:#A855F720;
+
+}
+
+
+
+.founder-icon i{
+
+    font-size:38px;
+
+    color:#A855F7;
+
+}
+
+
+
+
+.founder-card h2{
+
+    font-size:30px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.founder-card h3{
+
+    color:#A855F7;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.founder-card p{
+
+    color:#aaa;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+
+
+.team-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+
+}
+
+
+
+
+.team-card{
+
+
+    background:#ffffff05;
+
+    border:1px solid #ffffff12;
+
+    border-radius:18px;
+
+     padding:18px;
+    min-height:170px;
+    cursor:pointer;
+
+    transition:.35s;
+
+
+}
+
+
+
+.team-card:hover{
+
+
+    transform:translateY(-8px);
+
+    border-color:#A855F7;
+
+
+}
+
+
+
+.team-icon{
+
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:#A855F715;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.team-icon i{
+
+    color:#A855F7;
+
+    font-size:20px;
+
+}
+
+
+
+.team-card h3{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.team-card p{
+
+    color:#aaa;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+
+
+
+.team-details{
+
+
+    margin-top:45px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:#ffffff05;
+
+    border:1px solid #ffffff12;
+
+}
+
+
+.team-details h2{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.team-details p{
+
+    color:#aaa;
+
+}
+
+
+
+
+@keyframes fade{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+ 
+/* ==========================
+CONTACT SECTION
+========================== */
+
+
+.contact-section{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+}
+
+
+
+.contact-section.show{
+
+    display:block;
+
+    animation:fade .6s ease;
+
+}
+
+
+
+
+
+.contact-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-top:50px;
+
+
+}
+
+
+
+
+.contact-card{
+
+
+    background:#ffffff05;
+
+    border:1px solid #ffffff12;
+
+    border-radius:18px;
+
+    padding:20px 15px;
+min-height:160px;
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#A855F7;
+
+}
+
+
+
+
+
+.contact-icon{
+
+
+    width:46px;
+
+    height:46px;
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    border-radius:15px;
+
+    background:#A855F715;
+
+
+}
+
+
+
+.contact-icon i{
+
+    color:#A855F7;
+
+    font-size:20px;
+
+}
+
+
+
+.contact-card h3{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.contact-card p{
+
+    color:#aaa;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* ==========================
+FOOTER
+========================== */
+
+.footer{
+
+    padding:45px 8%;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:#020202;
+
+}
+
+.footer-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    text-align:center;
+
+}
+
+.footer-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#A855F7;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.footer-logo i{
+
+    font-size:30px;
+
+}
+
+.footer p{
+
+    color:#8a8a8a;
+
+    font-size:15px;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:14px;
+
+}
+
+.social-icons a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:12px;
+
+    background:#ffffff08;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+    background:#A855F7;
+
+    color:#000;
+
+    transform:translateY(-4px);
+
+}
+
+.footer small{
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+AI COURSE PAGE
+========================================== */
+
+.course-hero{
+
+    min-height:90vh;
+
+    padding:140px 8% 80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:80px;
+
+}
+
+.course-left{
+
+    flex:1;
+
+}
+
+.course-left h1{
+
+    font-size:65px;
+
+    line-height:1.1;
+
+    margin:25px 0;
+
+}
+
+.course-left h1 span{
+
+    color:#A855F7;
+
+}
+
+.course-left p{
+
+    color:#9f9f9f;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:650px;
+
+    margin-bottom:35px;
+
+}
+
+.course-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.ai-hero-card{
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.4s;
+
+}
+
+.ai-hero-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#A855F7;
+
+    box-shadow:0 20px 50px rgba(212,175,55,.15);
+
+}
+
+.ai-hero-card i{
+
+    font-size:90px;
+
+    color:#A855F7;
+
+    margin-bottom:25px;
+
+}
+
+.ai-hero-card h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.ai-hero-card p{
+
+    color:#999;
+
+}
+
+.course-nav{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    height:70px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 35px;
+
+    z-index:999;
+
+}
+
+.course-nav h2{
+
+    color:#A855F7;
+
+}
+
+.course-nav div{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.course-nav a{
+
+    color:#aaa;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.course-nav a:hover{
+
+    color:#A855F7;
+
+}
+
+/* ==========================================
+AI & ML COURSE PAGE
+========================================== */
+
+.course-hero{
+width:90%;
+margin:140px auto 80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:70px;
+}
+
+.course-left{
+flex:1;
+}
+
+.course-right{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-badge{
+display:inline-block;
+padding:8px 18px;
+background:rgba(212,175,55,.15);
+border:1px solid rgba(212,175,55,.35);
+border-radius:50px;
+color:#A855F7;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.course-left h1{
+font-size:60px;
+line-height:1.15;
+margin-bottom:25px;
+font-weight:700;
+}
+
+.course-left h1 span{
+color:#A855F7;
+}
+
+.course-left p{
+font-size:18px;
+line-height:1.8;
+color:#bbb;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:18px;
+}
+
+.ai-hero-card{
+width:360px;
+height:360px;
+border-radius:30px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.ai-hero-card i{
+font-size:90px;
+color:#A855F7;
+margin-bottom:20px;
+}
+
+.ai-hero-card h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.ai-hero-card p{
+color:#aaa;
+}
+
+/* SECTION */
+
+.section-header{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-header span{
+color:#A855F7;
+letter-spacing:3px;
+font-size:13px;
+}
+
+.section-header h2{
+font-size:50px;
+margin:20px 0;
+}
+
+.section-header h2 span{
+color:#A855F7;
+}
+
+.section-header p{
+width:700px;
+max-width:90%;
+margin:auto;
+color:#999;
+line-height:1.8;
+}
+
+/* ROADMAP */
+
+.roadmap-section{
+width:90%;
+margin:auto;
+padding:100px 0;
+}
+
+.roadmap{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.roadmap-card{
+width:240px;
+padding:35px;
+border-radius:22px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.roadmap-card:hover{
+transform:translateY(-8px);
+border-color:#A855F7;
+}
+
+.road-number{
+font-size:40px;
+color:#A855F7;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.roadmap-card h3{
+margin-bottom:15px;
+}
+
+.roadmap-card p{
+color:#999;
+line-height:1.7;
+}
+
+.completed{
+border:1px solid #A855F7;
+}
+
+.road-line{
+width:60px;
+height:3px;
+background:#A855F7;
+}
+
+/* MODULES */
+
+.modules-section{
+width:90%;
+margin:auto;
+padding:100px 0;
+}
+
+.module-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.module-card{
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.module-card:hover{
+transform:translateY(-10px);
+border-color:#A855F7;
+}
+
+.module-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.module-icon{
+font-size:35px;
+color:#A855F7;
+}
+
+.difficulty{
+padding:6px 16px;
+border-radius:50px;
+font-size:13px;
+}
+
+.beginner{
+background:#1d5;
+color:#000;
+}
+
+.intermediate{
+background:#ffa500;
+color:#000;
+}
+
+.advanced{
+background:#ff4444;
+color:#fff;
+}
+
+.progress{
+height:8px;
+background:#222;
+border-radius:50px;
+margin:25px 0;
+overflow:hidden;
+}
+
+.progress-fill{
+height:100%;
+background:#A855F7;
+}
+
+.module-info{
+display:flex;
+justify-content:space-between;
+margin-bottom:25px;
+color:#aaa;
+}
+
+.module-buttons{
+display:flex;
+gap:15px;
+}
+
+/* ==========================================
+MENTORS
+========================================== */
+
+.mentor-section{
+width:90%;
+margin:auto;
+padding:100px 0;
+}
+
+.mentor-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+}
+
+.mentor-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:25px;
+padding:40px;
+text-align:center;
+transition:.35s;
+}
+
+.mentor-card:hover{
+transform:translateY(-10px);
+border-color:#A855F7;
+box-shadow:0 0 25px rgba(212,175,55,.15);
+}
+
+.mentor-avatar{
+width:90px;
+height:90px;
+margin:auto;
+margin-bottom:25px;
+border-radius:50%;
+background:rgba(212,175,55,.15);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+color:#A855F7;
+}
+
+.mentor-card h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.mentor-card p{
+color:#aaa;
+margin-bottom:15px;
+}
+
+.mentor-tag{
+display:inline-block;
+padding:8px 18px;
+border-radius:50px;
+background:rgba(212,175,55,.12);
+color:#A855F7;
+margin-bottom:25px;
+font-size:14px;
+}
+
+/* ==========================================
+NOTES
+========================================== */
+
+.notes-section{
+width:90%;
+margin:auto;
+padding:100px 0;
+}
+
+.notes-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.note-card{
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.note-card:hover{
+transform:translateY(-10px);
+border-color:#A855F7;
+box-shadow:0 0 25px rgba(212,175,55,.12);
+}
+
+.note-icon{
+font-size:42px;
+color:#A855F7;
+margin-bottom:20px;
+}
+
+.note-card h3{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.note-card p{
+color:#aaa;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.note-buttons{
+display:flex;
+gap:15px;
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.course-hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-buttons{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.course-left h1{
+font-size:42px;
+}
+
+.ai-hero-card{
+width:300px;
+height:300px;
+}
+
+.section-header h2{
+font-size:36px;
+}
+
+.roadmap{
+flex-direction:column;
+}
+
+.road-line{
+width:3px;
+height:50px;
+}
+
+}
+
+.course-hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.lesson-page{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
+padding:120px 8%;
+min-height:100vh;
+}
+
+.video-card iframe{
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 0 40px rgba(255,200,0,.2);
+}
+
+.lesson-list{
+margin:30px 0;
+line-height:2;
+font-size:18px;
+}
+
+.lesson-buttons{
+display:flex;
+gap:20px;
+margin-top:30px;
+}
+
+.course-progress,
+.lessons-panel{
+
+background:#111;
+
+padding:25px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+margin-bottom:25px;
+
+}
+
+.lessons-panel ul{
+
+list-style:none;
+
+padding:0;
+
+}
+
+.lessons-panel li{
+
+padding:15px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.lessons-panel li:hover{
+
+color:#f4c542;
+
+padding-left:10px;
+
+}
+
+.next-btn{
+
+width:100%;
+
+}
+
+/* ==========================
+DASHBOARD
+========================== */
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:260px;
+    background:#0d0d0d;
+    border-right:1px solid rgba(255,255,255,.08);
+    padding:30px;
+}
+
+.sidebar h2{
+    color:#fff;
+    margin-bottom:35px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:15px;
+    border-radius:12px;
+    color:#bbb;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar li:hover,
+.sidebar .active{
+    background:#A855F7;
+    color:#000;
+}
+
+.dashboard-main{
+    flex:1;
+    padding:50px;
+}
+
+.dashboard-main h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.dashboard-main p{
+    color:#aaa;
+    margin-bottom:40px;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.dash-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.dash-card:hover{
+    transform:translateY(-8px);
+    border-color:#A855F7;
+}
+
+.dash-card h2{
+    margin-bottom:15px;
+}
+
+.dash-card p{
+    margin-bottom:20px;
+    color:#aaa;
+}
+/* ==========================================
+NEXORA PREMIUM CARD ANIMATIONS
+========================================== */
+
+/* Floating Animation */
+
+@keyframes floatCard{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+/* Golden Glow */
+
+@keyframes goldGlow{
+
+    0%,100%{
+        box-shadow:0 8px 25px rgba(0,0,0,.25);
+    }
+
+    50%{
+        box-shadow:0 15px 40px rgba(212,175,55,.18);
+    }
+
+}
+
+/* =========================================
+   NEXORA DEMON GLASS CARDS
+========================================= */
+
+.about-card,
+.feature-card,
+.team-card,
+.contact-card,
+.module-card,
+.lesson-card,
+.project-card,
+.learning-card,
+.resource-box div{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(124,58,237,.10),
+            rgba(37,99,235,.05),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(168,85,247,.16);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.35);
+
+    animation:
+        floatCard 5s ease-in-out infinite,
+        demonGlow 5s ease-in-out infinite;
+
+}
+@keyframes demonGlow{
+
+    0%,100%{
+
+        box-shadow:
+            0 8px 30px rgba(0,0,0,.35);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 12px 40px rgba(124,58,237,.16),
+            0 0 25px rgba(37,99,235,.08);
+
+    }
+
+}
+
+.about-card::before,
+.feature-card::before,
+.team-card::before,
+.contact-card::before,
+.module-card::before,
+.lesson-card::before,
+.project-card::before,
+.learning-card::before,
+.resource-box div::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-130%;
+
+    width:60%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+
+
+.about-card:hover::before,
+.feature-card:hover::before,
+.team-card:hover::before,
+.contact-card:hover::before,
+.module-card:hover::before,
+.lesson-card:hover::before,
+.project-card:hover::before,
+.learning-card:hover::before,
+.resource-box div:hover::before{
+
+    left:150%;
+
+}
+
+.about-card:hover,
+.feature-card:hover,
+.team-card:hover,
+.contact-card:hover,
+.module-card:hover,
+.lesson-card:hover,
+.project-card:hover,
+.learning-card:hover,
+.resource-box div:hover{
+
+    transform:
+        translateY(-14px)
+        scale(1.03);
+
+    border-color:#A855F7;
+
+    box-shadow:
+        0 20px 50px rgba(124,58,237,.25),
+        0 0 30px rgba(37,99,235,.12);
+
+    transition:.35s;
+
+}
+
+
+
+.gold-btn,
+.glass-btn{
+    transition:all .35s ease;
+}
+
+.gold-btn:hover,
+.glass-btn:hover{
+    transform:translateY(-6px) scale(1.04);
+}
+
+.gold-btn:active,
+.glass-btn:active{
+    transform:scale(.96);
+}
+.about-icon,
+.feature-icon,
+.team-icon,
+.contact-icon,
+.module-icon{
+
+    animation:floatIcon 4s ease-in-out infinite;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,58,237,.20),
+            rgba(37,99,235,.12)
+        );
+
+    border:1px solid rgba(168,85,247,.12);
+
+}
+
+@keyframes floatIcon{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+/* =================================
+   CINEMATIC NEXORA LETTER REVEAL
+================================= */
+
+.nexora-title{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    overflow:hidden;
+}
+
+.nexora-title span{
+
+    display:inline-block;
+
+    opacity:0;
+
+    transform:
+        translateY(70px)
+        scale(.75)
+        rotateX(90deg);
+
+    filter:blur(12px);
+
+    animation:
+        nexoraLetterReveal
+        1.4s
+        cubic-bezier(.16,1,.3,1)
+        forwards;
+
+}
+
+
+/* EACH LETTER */
+
+.nexora-title span:nth-child(1){
+    animation-delay:.2s;
+}
+
+.nexora-title span:nth-child(2){
+    animation-delay:.45s;
+}
+
+.nexora-title span:nth-child(3){
+    animation-delay:.7s;
+}
+
+.nexora-title span:nth-child(4){
+    animation-delay:.95s;
+}
+
+.nexora-title span:nth-child(5){
+    animation-delay:1.2s;
+}
+
+.nexora-title span:nth-child(6){
+    animation-delay:1.45s;
+}
+
+
+@keyframes nexoraLetterReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(70px)
+            scale(.75)
+            rotateX(90deg);
+
+        filter:blur(12px);
+
+    }
+
+    60%{
+
+        opacity:1;
+
+        filter:blur(2px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1)
+            rotateX(0);
+
+        filter:blur(0);
+
+    }
+
+}
+
+/* =========================================
+   NEXORA NX OPENING ANIMATION
+   ========================================= */
+
+.nx-animation{
+
+    width:420px;
+    height:420px;
+
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    opacity:1 !important;
+
+    visibility:visible !important;
+
+    z-index:50;
+
+}
+
+
+/* LETTERS */
+
+.nx-letter{
+
+    position:relative;
+
+    display:block !important;
+
+    font-size:180px;
+
+    font-weight:800;
+
+    line-height:1;
+
+    color:#A855F7;
+
+    opacity:0;
+
+}
+
+
+/* N */
+
+.n-letter{
+
+    transform:translateX(-120px);
+
+}
+
+
+/* X */
+
+.x-letter{
+
+    transform:translateX(120px);
+
+}
+
+
+/* STARTED */
+
+.nx-animation.play-nx .n-letter{
+
+    animation:nxNReveal 1.2s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+
+.nx-animation.play-nx .x-letter{
+
+    animation:nxXReveal 1.2s cubic-bezier(.22,1,.36,1) .35s forwards;
+
+}
+
+
+/* =========================================
+   N ANIMATION
+========================================= */
+
+@keyframes nxNReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateX(-120px) scale(.7);
+
+        filter:blur(12px);
+
+    }
+
+    60%{
+
+        opacity:1;
+
+        transform:translateX(8px) scale(1.08);
+
+        filter:blur(0);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateX(0) scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+/* =========================================
+   X ANIMATION
+========================================= */
+
+@keyframes nxXReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateX(120px) scale(.7);
+
+        filter:blur(12px);
+
+    }
+
+    60%{
+
+        opacity:1;
+
+        transform:translateX(-8px) scale(1.08);
+
+        filter:blur(0);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateX(0) scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+/* =========================================
+   NEXORA NX CINEMATIC OPENING
+========================================= */
+
+.nx-animation{
+    width:420px;
+    height:420px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+    z-index:50;
+
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* NX LETTERS */
+
+.nx-letter{
+    position:relative;
+
+    font-size:180px;
+    font-weight:800;
+    line-height:1;
+
+    color:#A855F7;
+
+    opacity:0;
+
+    filter:blur(14px);
+
+    will-change:transform, opacity, filter;
+}
+
+
+/* N START POSITION */
+
+.n-letter{
+    transform:translateX(-120px) scale(.7);
+}
+
+
+/* X START POSITION */
+
+.x-letter{
+    transform:translateX(120px) scale(.7);
+}
+
+
+/* =========================================
+   START NX ANIMATION
+========================================= */
+
+.nx-animation.play-nx .n-letter{
+
+    animation:
+        nxNReveal
+        1.35s
+        cubic-bezier(.16,1,.3,1)
+        forwards;
+
+}
+
+
+.nx-animation.play-nx .x-letter{
+
+    animation:
+        nxXReveal
+        1.35s
+        cubic-bezier(.16,1,.3,1)
+        .45s
+        forwards;
+
+}
+
+
+/* =========================================
+   N ANIMATION
+========================================= */
+
+@keyframes nxNReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateX(-120px)
+            scale(.7);
+
+        filter:blur(14px);
+
+    }
+
+    45%{
+
+        opacity:1;
+
+        transform:
+            translateX(12px)
+            scale(1.08);
+
+        filter:blur(2px);
+
+    }
+
+    70%{
+
+        transform:
+            translateX(-3px)
+            scale(1.02);
+
+        filter:blur(0);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translateX(0)
+            scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+/* =========================================
+   X ANIMATION
+========================================= */
+
+@keyframes nxXReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateX(120px)
+            scale(.7);
+
+        filter:blur(14px);
+
+    }
+
+    45%{
+
+        opacity:1;
+
+        transform:
+            translateX(-12px)
+            scale(1.08);
+
+        filter:blur(2px);
+
+    }
+
+    70%{
+
+        transform:
+            translateX(3px)
+            scale(1.02);
+
+        filter:blur(0);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translateX(0)
+            scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+/* =========================================
+   DEMON NX GLOW
+========================================= */
+
+.nx-animation{
+
+    filter:
+        drop-shadow(0 0 18px rgba(168,85,247,.35))
+        drop-shadow(0 0 45px rgba(37,99,235,.15));
+
+}
+
+.nx-letter{
+
+    text-shadow:
+        0 0 12px rgba(168,85,247,.55),
+        0 0 35px rgba(124,58,237,.30),
+        0 0 70px rgba(37,99,235,.15);
+
+}
+
+/* =========================================================
+   NEXORA PREMIUM STARTUP EXPERIENCE
+   BLACK × VIOLET × ELECTRIC BLUE
+   HOMEPAGE ONLY
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html{
+    scroll-behavior:smooth;
+    background:#030006;
+}
+
+body{
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(124,58,237,.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(37,99,235,.07),
+            transparent 32%
+        ),
+        #030006;
+
+    color:#F5F3FF;
+}
+
+
+/* =========================================================
+   PREMIUM BACKGROUND LIGHTING
+========================================================= */
+
+body::before{
+
+    width:800px;
+    height:800px;
+
+    top:-350px;
+    left:-300px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,58,237,.22),
+            rgba(88,28,135,.08) 42%,
+            transparent 72%
+        );
+
+    filter:blur(100px);
+
+    opacity:.8;
+}
+
+body::after{
+
+    width:800px;
+    height:800px;
+
+    right:-350px;
+    bottom:-350px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.20),
+            rgba(30,64,175,.07) 42%,
+            transparent 72%
+        );
+
+    filter:blur(110px);
+
+    opacity:.75;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+#mainContent{
+
+    position:relative;
+
+    width:100%;
+
+    isolation:isolate;
+}
+
+
+/* =========================================================
+   PREMIUM NAVBAR
+========================================================= */
+
+.navbar{
+
+    top:22px;
+
+    width:min(1180px, calc(100% - 48px));
+
+    height:68px;
+
+    padding:0 22px 0 24px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(12,4,24,.82),
+            rgba(4,10,25,.78)
+        );
+
+    border:1px solid rgba(255,255,255,.075);
+
+    box-shadow:
+        0 18px 55px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.045);
+
+    backdrop-filter:blur(26px);
+    -webkit-backdrop-filter:blur(26px);
+
+    transition:
+        width .45s cubic-bezier(.16,1,.3,1),
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.navbar:hover{
+
+    width:min(1210px, calc(100% - 36px));
+
+    border-color:
+        rgba(168,85,247,.18);
+
+    box-shadow:
+        0 20px 65px rgba(0,0,0,.42),
+        0 0 40px rgba(124,58,237,.07),
+        inset 0 1px 0 rgba(255,255,255,.055);
+}
+
+
+/* LOGO */
+
+.logo{
+
+    gap:11px;
+
+    font-size:19px;
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    color:#fff;
+}
+
+.logo i{
+
+    width:36px;
+    height:36px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:11px;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #2563EB
+        );
+
+    box-shadow:
+        0 8px 25px rgba(124,58,237,.20);
+
+    font-size:18px;
+}
+
+
+/* NAVIGATION */
+
+.navbar ul{
+
+    gap:8px;
+
+    padding:5px;
+
+    border-radius:13px;
+
+    background:rgba(255,255,255,.025);
+
+    border:1px solid rgba(255,255,255,.035);
+}
+
+.navbar li{
+
+    position:relative;
+}
+
+.navbar a{
+
+    position:relative;
+
+    display:block;
+
+    padding:9px 14px;
+
+    border-radius:9px;
+
+    color:#888596;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.01em;
+
+    transition:
+        color .3s ease,
+        background .3s ease,
+        transform .3s ease;
+}
+
+.navbar a:hover{
+
+    color:#fff;
+
+    background:rgba(168,85,247,.07);
+
+}
+
+.navbar a.active{
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,58,237,.15),
+            rgba(37,99,235,.10)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.navbar a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:3px;
+
+    width:18px;
+    height:2px;
+
+    transform:translateX(-50%);
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #A855F7,
+            #3B82F6
+        );
+
+    box-shadow:
+        0 0 10px rgba(168,85,247,.65);
+}
+
+
+/* =========================================================
+   PREMIUM BUTTON SYSTEM
+========================================================= */
+
+.gold-btn,
+.glass-btn{
+
+    position:relative;
+
+    min-height:46px;
+
+    padding:0 20px;
+
+    border-radius:12px;
+
+    font-family:inherit;
+
+    font-size:13px;
+    font-weight:600;
+
+    letter-spacing:.01em;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+    transition:
+        transform .35s cubic-bezier(.16,1,.3,1),
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+
+.gold-btn{
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            135deg,
+            #7C3AED 0%,
+            #6434d8 38%,
+            #2563EB 100%
+        );
+
+    box-shadow:
+        0 12px 28px rgba(67,35,160,.25),
+        inset 0 1px 0 rgba(255,255,255,.13);
+
+}
+
+
+.gold-btn::before,
+.glass-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18),
+            transparent
+        );
+
+    transform:skewX(-25deg);
+
+    transition:left .7s cubic-bezier(.16,1,.3,1);
+
+    z-index:-1;
+}
+
+.gold-btn:hover::before,
+.glass-btn:hover::before{
+
+    left:140%;
+}
+
+.gold-btn:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.015);
+
+    box-shadow:
+        0 18px 40px rgba(67,35,160,.34),
+        0 0 28px rgba(124,58,237,.13),
+        inset 0 1px 0 rgba(255,255,255,.15);
+}
+
+.glass-btn{
+
+    border:1px solid rgba(255,255,255,.11);
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:#F5F3FF;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.glass-btn:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.015);
+
+    color:#fff;
+
+    border-color:
+        rgba(168,85,247,.34);
+
+    background:
+        rgba(168,85,247,.07);
+
+    box-shadow:
+        0 14px 35px rgba(0,0,0,.25),
+        0 0 25px rgba(124,58,237,.10);
+}
+
+.gold-btn:active,
+.glass-btn:active{
+
+    transform:
+        translateY(0)
+        scale(.98);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    min-height:100svh;
+
+    padding:
+        145px
+        max(7vw, 40px)
+        90px;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1.02fr)
+        minmax(420px, .98fr);
+
+    align-items:center;
+
+    gap:40px;
+
+    overflow:hidden;
+}
+
+
+/* HERO LIGHT */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    left:40%;
+    top:46%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,58,237,.14),
+            rgba(37,99,235,.06) 40%,
+            transparent 72%
+        );
+
+    filter:blur(55px);
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+
+/* HERO GRID */
+
+.hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-2;
+
+    overflow:hidden;
+}
+
+.grid{
+
+    opacity:.26;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.055) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.055) 1px,
+            transparent 1px
+        );
+
+    background-size:72px 72px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 10%,
+            transparent 75%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 10%,
+            transparent 75%
+        );
+}
+
+
+/* HERO COLOR LIGHTS */
+
+.hero-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    right:8%;
+    top:12%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(168,85,247,.12),
+            transparent 68%
+        );
+
+    filter:blur(45px);
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:690px;
+
+    padding-top:20px;
+}
+
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    min-height:34px;
+
+    padding:0 13px;
+
+    margin-bottom:26px;
+
+    border-radius:999px;
+
+    background:
+        rgba(168,85,247,.055);
+
+    border:1px solid
+        rgba(168,85,247,.14);
+
+    color:#bba6ff;
+
+    font-size:11px;
+    font-weight:500;
+
+    letter-spacing:.02em;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.03);
+
+}
+
+.hero-badge::before{
+
+    content:"";
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#A855F7;
+
+    box-shadow:
+        0 0 12px rgba(168,85,247,.8);
+
+    animation:
+        premiumPulse 2.2s ease-in-out infinite;
+}
+
+
+@keyframes premiumPulse{
+
+    0%,100%{
+        transform:scale(1);
+        opacity:.65;
+    }
+
+    50%{
+        transform:scale(1.45);
+        opacity:1;
+    }
+
+}
+
+
+/* HERO HEADING */
+
+.hero h1{
+
+    max-width:760px;
+
+    margin:0 0 25px;
+
+    font-size:
+        clamp(
+            54px,
+            6.2vw,
+            92px
+        );
+
+    line-height:.98;
+
+    letter-spacing:-.055em;
+
+    font-weight:700;
+
+    color:#F8F7FF;
+
+    text-wrap:balance;
+}
+
+.hero h1 span{
+
+    position:relative;
+
+    display:inline-block;
+
+    color:transparent;
+
+    background:
+        linear-gradient(
+            100deg,
+            #A855F7 10%,
+            #C084FC 45%,
+            #60A5FA 90%
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    text-shadow:
+        0 0 40px rgba(168,85,247,.10);
+}
+
+
+/* UNDERLINE LIGHT */
+
+.hero h1 span::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:3%;
+    right:3%;
+    bottom:-7px;
+
+    height:1px;
+
+    opacity:.55;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(168,85,247,.65),
+            transparent
+        );
+}
+
+
+/* HERO PARAGRAPH */
+
+.hero p{
+
+    max-width:620px;
+
+    margin:0 0 30px;
+
+    color:#9390A2;
+
+    font-size:16px;
+
+    line-height:1.85;
+
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:38px;
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.hero-stats{
+
+    display:flex;
+
+    align-items:stretch;
+
+    gap:0;
+
+    width:max-content;
+
+    max-width:100%;
+
+    padding:12px 0;
+
+    border-top:1px solid rgba(255,255,255,.07);
+
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+
+.hero-stats > div{
+
+    min-width:118px;
+
+    padding:3px 24px;
+
+    border-right:
+        1px solid rgba(255,255,255,.07);
+}
+
+.hero-stats > div:first-child{
+
+    padding-left:0;
+}
+
+.hero-stats > div:last-child{
+
+    border-right:none;
+
+    padding-right:0;
+}
+
+.hero-stats h2{
+
+    margin:0 0 4px;
+
+    color:#fff;
+
+    font-size:25px;
+
+    line-height:1;
+
+    letter-spacing:-.03em;
+}
+
+.hero-stats p{
+
+    margin:0;
+
+    color:#777485;
+
+    font-size:10px;
+
+    line-height:1.4;
+
+    white-space:nowrap;
+
+}
+
+
+/* =========================================================
+   NX VISUAL
+========================================================= */
+
+.nx-animation{
+
+    position:relative;
+
+    width:
+        clamp(
+            390px,
+            42vw,
+            600px
+        );
+
+    height:
+        clamp(
+            390px,
+            42vw,
+            600px
+        );
+
+    justify-self:center;
+
+    display:flex !important;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:4;
+
+    opacity:1 !important;
+    visibility:visible !important;
+
+    filter:
+        drop-shadow(
+            0 0 22px
+            rgba(168,85,247,.28)
+        )
+        drop-shadow(
+            0 0 70px
+            rgba(37,99,235,.13)
+        );
+
+    transform-style:preserve-3d;
+
+    will-change:transform;
+
+}
+
+
+/* OUTER AURA */
+
+.nx-animation::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:82%;
+    height:82%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(168,85,247,.16),
+            rgba(37,99,235,.07) 42%,
+            transparent 72%
+        );
+
+    filter:blur(35px);
+
+    animation:
+        nxAura 5s ease-in-out infinite;
+
+}
+
+@keyframes nxAura{
+
+    0%,100%{
+        transform:scale(.94);
+        opacity:.65;
+    }
+
+    50%{
+        transform:scale(1.06);
+        opacity:1;
+    }
+
+}
+
+
+/* =========================================================
+   NX RINGS
+========================================================= */
+
+.nx-animation::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:68%;
+    height:68%;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(168,85,247,.18);
+
+    box-shadow:
+        0 0 40px rgba(124,58,237,.07),
+        inset 0 0 35px rgba(37,99,235,.04);
+
+    animation:
+        nxRing 12s linear infinite;
+
+}
+
+@keyframes nxRing{
+
+    from{
+        transform:rotate(0deg) scaleY(.56);
+    }
+
+    to{
+        transform:rotate(360deg) scaleY(.56);
+    }
+
+}
+
+
+/* =========================================================
+   NX LETTERS
+========================================================= */
+
+.nx-letter{
+
+    position:relative;
+
+    z-index:10;
+
+    font-size:
+        clamp(
+            145px,
+            13vw,
+            220px
+        );
+
+    font-weight:800;
+
+    line-height:.8;
+
+    letter-spacing:-.15em;
+
+    color:#fff;
+
+    filter:none;
+
+    text-shadow:
+        0 0 12px rgba(168,85,247,.62),
+        0 0 35px rgba(124,58,237,.30),
+        0 0 85px rgba(37,99,235,.15);
+
+    will-change:
+        transform,
+        opacity,
+        filter;
+}
+
+
+/* INDIVIDUAL LETTER DEPTH */
+
+.n-letter{
+
+    margin-right:-18px;
+
+}
+
+.x-letter{
+
+    margin-left:-18px;
+
+}
+
+
+/* =========================================================
+   FLOATING PARTICLE DOTS
+========================================================= */
+
+.nx-animation{
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(168,85,247,.045),
+            transparent 38%
+        );
+}
+
+.nx-animation .n-letter::before,
+.nx-animation .x-letter::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:#60A5FA;
+
+    box-shadow:
+        0 0 14px rgba(96,165,250,.85);
+
+    animation:
+        particleFloat 4s ease-in-out infinite;
+}
+
+.nx-animation .n-letter::before{
+
+    top:-40px;
+    right:-30px;
+}
+
+.nx-animation .x-letter::after{
+
+    bottom:-30px;
+    left:-20px;
+
+    background:#A855F7;
+
+    box-shadow:
+        0 0 14px rgba(168,85,247,.85);
+
+    animation-delay:1.5s;
+}
+
+@keyframes particleFloat{
+
+    0%,100%{
+        transform:translateY(0) scale(1);
+        opacity:.45;
+    }
+
+    50%{
+        transform:translateY(-12px) scale(1.35);
+        opacity:1;
+    }
+
+}
+
+
+/* =========================================================
+   CONTINUOUS HOMEPAGE SECTIONS
+========================================================= */
+
+#about,
+#features,
+#team,
+#contact{
+
+    display:block !important;
+
+    min-height:100svh;
+
+    position:relative;
+
+    padding:
+        145px
+        max(7vw, 40px)
+        115px;
+
+    scroll-margin-top:100px;
+
+    overflow:hidden;
+
+}
+
+
+/* SECTION TRANSITION LIGHT */
+
+#about::before,
+#features::before,
+#team::before,
+#contact::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:8%;
+    right:8%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(168,85,247,.22),
+            rgba(37,99,235,.12),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
+.section-header{
+
+    position:relative;
+
+    max-width:800px;
+
+    margin:
+        0 auto 58px;
+
+    text-align:center;
+
+}
+
+
+.section-header > span{
+
+    display:inline-block;
+
+    margin-bottom:5px;
+
+    color:#A855F7;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:.24em;
+
+}
+
+
+.section-header h2{
+
+    margin:16px 0;
+
+    font-size:
+        clamp(
+            38px,
+            4vw,
+            60px
+        );
+
+    line-height:1.02;
+
+    letter-spacing:-.045em;
+
+}
+
+
+.section-header h2 span{
+
+    color:transparent;
+
+    background:
+        linear-gradient(
+            100deg,
+            #A855F7,
+            #60A5FA
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+}
+
+
+.section-header p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#858190;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   PREMIUM GLASS CARDS
+========================================================= */
+
+.about-card,
+.feature-card,
+.team-card,
+.contact-card{
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.042),
+            rgba(255,255,255,.018)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.075);
+
+    box-shadow:
+        0 16px 50px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.035);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    overflow:hidden;
+
+    animation:none !important;
+
+    transform:none;
+
+    transition:
+        transform .5s cubic-bezier(.16,1,.3,1),
+        border-color .35s ease,
+        box-shadow .5s ease;
+}
+
+
+/* TOP LIGHT */
+
+.about-card::after,
+.feature-card::after,
+.team-card::after,
+.contact-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.15),
+            transparent
+        );
+
+    opacity:.6;
+}
+
+
+/* HOVER */
+
+.about-card:hover,
+.feature-card:hover,
+.team-card:hover,
+.contact-card:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.015);
+
+    border-color:
+        rgba(168,85,247,.28);
+
+    box-shadow:
+        0 28px 70px rgba(0,0,0,.30),
+        0 0 35px rgba(124,58,237,.08),
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+
+/* CARD SHINE */
+
+.about-card::before,
+.feature-card::before,
+.team-card::before,
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+    left:-45%;
+
+    width:55%;
+    height:320%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.07),
+            transparent
+        );
+
+    transform:rotate(18deg);
+
+    transition:
+        transform .85s cubic-bezier(.16,1,.3,1);
+
+    pointer-events:none;
+}
+
+.about-card:hover::before,
+.feature-card:hover::before,
+.team-card:hover::before,
+.contact-card:hover::before{
+
+    transform:
+        translateX(250%)
+        rotate(18deg);
+}
+
+
+/* =========================================================
+   ABOUT GRID
+========================================================= */
+
+.about-grid{
+
+    max-width:1180px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap:18px;
+}
+
+
+.about-card{
+
+    min-height:205px;
+
+    padding:28px;
+
+    border-radius:20px;
+}
+
+
+.about-card:nth-child(1),
+.about-card:nth-child(4){
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(124,58,237,.075),
+            rgba(255,255,255,.018)
+        );
+}
+
+
+.about-icon,
+.feature-icon,
+.team-icon,
+.contact-icon{
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:22px;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,58,237,.14),
+            rgba(37,99,235,.08)
+        );
+
+    border:
+        1px solid
+        rgba(168,85,247,.13);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04);
+
+    animation:none !important;
+}
+
+.about-icon i,
+.feature-icon i,
+.team-icon i,
+.contact-icon i{
+
+    color:#B77CFF;
+
+    font-size:17px;
+}
+
+
+.about-card h3,
+.feature-card h3,
+.team-card h3,
+.contact-card h3{
+
+    margin-bottom:10px;
+
+    font-size:17px;
+
+    letter-spacing:-.02em;
+}
+
+
+.about-card p,
+.feature-card p,
+.team-card p,
+.contact-card p{
+
+    color:#777486;
+
+    font-size:13px;
+
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   ABOUT HIGHLIGHT
+========================================================= */
+
+.about-highlight{
+
+    max-width:1180px;
+
+    margin:55px auto 0;
+}
+
+.highlight-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    max-width:none;
+
+    padding:
+        48px
+        50px;
+
+    text-align:center;
+
+    border:
+        1px solid
+        rgba(168,85,247,.13);
+
+    border-radius:24px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(124,58,237,.10),
+            transparent 55%
+        ),
+        rgba(255,255,255,.018);
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.highlight-box h2{
+
+    margin-bottom:13px;
+
+    font-size:32px;
+
+    letter-spacing:-.04em;
+}
+
+.highlight-box p{
+
+    max-width:650px;
+
+    margin:0 auto 24px;
+
+    color:#7f7a89;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature-grid{
+
+    max-width:1180px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap:18px;
+}
+
+
+.feature-card{
+
+    min-height:230px;
+
+    padding:27px;
+
+    border-radius:20px;
+}
+
+
+.feature-card .feature-icon{
+
+    margin-bottom:20px;
+}
+
+
+.feature-card h3{
+
+    font-size:18px;
+}
+
+
+.feature-card p{
+
+    min-height:51px;
+
+    margin-bottom:20px;
+}
+
+
+.feature-card > .gold-btn,
+.feature-card > .glass-btn{
+
+    min-height:40px;
+
+    padding:
+        0 15px;
+
+    font-size:11px;
+}
+
+
+/* COMING SOON */
+
+.coming-badge{
+
+    position:absolute !important;
+
+    top:18px;
+    right:18px;
+
+    padding:
+        5px 9px !important;
+
+    border:
+        1px solid
+        rgba(168,85,247,.15);
+
+    border-radius:999px;
+
+    background:
+        rgba(168,85,247,.05);
+
+    color:#9D86C4 !important;
+
+    font-size:9px !important;
+
+    letter-spacing:.08em;
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.founder-card{
+
+    max-width:900px;
+
+    margin:
+        0 auto 40px;
+
+    padding:32px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(124,58,237,.08),
+            rgba(255,255,255,.018)
+        );
+
+    border:
+        1px solid
+        rgba(168,85,247,.14);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.22);
+
+    transition:
+        transform .5s cubic-bezier(.16,1,.3,1),
+        border-color .35s ease;
+}
+
+.founder-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:
+        rgba(168,85,247,.28);
+}
+
+.founder-icon{
+
+    flex-shrink:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,58,237,.18),
+            rgba(37,99,235,.10)
+        );
+
+    border:
+        1px solid
+        rgba(168,85,247,.17);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18);
+}
+
+.founder-icon i{
+
+    color:#B77CFF;
+}
+
+.founder-card h2{
+
+    font-size:27px;
+
+    letter-spacing:-.035em;
+}
+
+.founder-card h3{
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:.06em;
+
+    text-transform:uppercase;
+
+    color:#A855F7;
+}
+
+.founder-card p{
+
+    color:#85808F;
+
+    font-size:14px;
+}
+
+
+/* TEAM GRID */
+
+.team-grid{
+
+    max-width:1180px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
+}
+
+.team-card{
+
+    min-height:195px;
+
+    padding:26px;
+
+    border-radius:20px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+
+    max-width:1000px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:16px;
+}
+
+.contact-card{
+
+    min-height:185px;
+
+    padding:25px 18px;
+
+    border-radius:20px;
+
+}
+
+.contact-card p{
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   TEAM / FEATURE DETAIL PANELS
+========================================================= */
+
+.feature-panel,
+.team-details{
+
+    max-width:1000px;
+
+    margin:
+        40px auto 0;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.018);
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+
+    position:relative;
+
+    padding:
+        75px
+        8%
+        40px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #040309,
+            #020204
+        );
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.06);
+}
+
+.footer-content{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.footer-logo{
+
+    font-size:22px;
+
+    letter-spacing:.08em;
+
+    color:#fff;
+}
+
+.footer-logo i{
+
+    color:#A855F7;
+}
+
+.footer p{
+
+    color:#686474;
+
+    font-size:13px;
+}
+
+.social-icons a{
+
+    width:38px;
+    height:38px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+
+    background:
+        rgba(255,255,255,.025);
+
+    color:#aaa;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-4px);
+
+    background:
+        rgba(168,85,247,.10);
+
+    border-color:
+        rgba(168,85,247,.24);
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   LOADER UPGRADE
+========================================================= */
+
+#loader{
+
+    background:
+        radial-gradient(
+            circle at center,
+            #0b0414 0%,
+            #030006 55%,
+            #010102 100%
+        );
+
+    gap:18px;
+
+    transition:
+        opacity .5s ease;
+}
+
+.loader-logo{
+
+    color:#fff;
+
+    letter-spacing:.08em;
+
+}
+
+.loader-logo i{
+
+    color:#A855F7;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(168,85,247,.5)
+        );
+}
+
+.loader-line{
+
+    width:210px;
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #A855F7,
+            #60A5FA,
+            transparent
+        );
+
+    box-shadow:
+        0 0 14px rgba(168,85,247,.25);
+}
+
+
+/* =========================================================
+   CINEMATIC SECTION STATES
+========================================================= */
+
+#home,
+#about,
+#features,
+#team,
+#contact{
+
+    transform-origin:center center;
+
+    will-change:
+        transform,
+        opacity,
+        filter;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .navbar{
+
+        width:
+            calc(100% - 30px);
+
+        padding:
+            0 16px;
+    }
+
+    .navbar ul{
+
+        gap:2px;
+    }
+
+    .navbar a{
+
+        padding:
+            8px 9px;
+
+        font-size:11px;
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:
+            140px
+            7vw
+            100px;
+
+        gap:10px;
+    }
+
+    .hero-content{
+
+        max-width:760px;
+
+        margin:auto;
+
+        padding-top:20px;
+    }
+
+    .hero h1{
+
+        max-width:760px;
+
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero p{
+
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .hero-stats{
+
+        margin:auto;
+    }
+
+    .nx-animation{
+
+        order:-1;
+
+        width:360px;
+        height:360px;
+
+        margin:auto;
+
+        opacity:.82 !important;
+    }
+
+    .about-grid,
+    .feature-grid,
+    .team-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .contact-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+}
+
+
+@media(max-width:650px){
+
+    .navbar{
+
+        top:10px;
+
+        height:60px;
+
+        border-radius:15px;
+    }
+
+    .logo span{
+
+        display:none;
+    }
+
+    .navbar nav{
+
+        display:none;
+    }
+
+    .navbar .gold-btn{
+
+        min-height:38px;
+
+        padding:
+            0 13px;
+
+        font-size:10px;
+    }
+
+    .hero{
+
+        min-height:100svh;
+
+        padding:
+            105px
+            22px
+            80px;
+    }
+
+    .nx-animation{
+
+        width:285px;
+        height:285px;
+    }
+
+    .hero h1{
+
+        font-size:
+            clamp(
+                46px,
+                14vw,
+                65px
+            );
+    }
+
+    .hero p{
+
+        font-size:14px;
+
+        line-height:1.75;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .hero-buttons button{
+
+        width:100%;
+    }
+
+    .hero-stats{
+
+        width:100%;
+
+        justify-content:center;
+    }
+
+    .hero-stats > div{
+
+        min-width:0;
+
+        flex:1;
+
+        padding:
+            3px 12px;
+    }
+
+    .hero-stats h2{
+
+        font-size:21px;
+    }
+
+    .hero-stats p{
+
+        font-size:9px;
+    }
+
+    #about,
+    #features,
+    #team,
+    #contact{
+
+        min-height:auto;
+
+        padding:
+            110px
+            22px
+            90px;
+    }
+
+    .section-header{
+
+        margin-bottom:40px;
+    }
+
+    .section-header h2{
+
+        font-size:38px;
+    }
+
+    .about-grid,
+    .feature-grid,
+    .team-grid,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .about-card,
+    .feature-card,
+    .team-card,
+    .contact-card{
+
+        min-height:auto;
+    }
+
+    .founder-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .highlight-box{
+
+        padding:35px 22px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation:none !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:auto !important;
+    }
+}
+
+
+/* =========================================
+   LOADER FIX
+========================================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+#loader.loader-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#mainContent {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 1s ease;
+}
+
+#mainContent.site-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =====================================================
+   NEXORA AUTH MODAL
+==================================================
+
+/* =====================================================
+   NEXORA AUTH MODAL
+===================================================== */
+ 
+.nexora-auth-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(124, 58, 237, 0.16),
+            transparent 45%
+        ),
+        rgba(3, 0, 6, 0.88);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    animation: nexoraOverlayIn 0.35s ease forwards;
+}
+
+
+.nexora-auth-box {
+    position: relative;
+    width: min(480px, 100%);
+    padding: 42px 36px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 5, 35, 0.96),
+            rgba(3, 0, 6, 0.98)
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.45);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 40px rgba(124, 58, 237, 0.18),
+        0 0 100px rgba(37, 99, 235, 0.08),
+        inset 0 0 30px rgba(168, 85, 247, 0.04);
+
+    overflow: hidden;
+
+    animation: nexoraModalIn 0.45s cubic-bezier(.16,1,.3,1);
+}
+
+
+.nexora-auth-box::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #7C3AED,
+        #22D3EE,
+        #7C3AED,
+        transparent
+    );
+
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.8);
+}
+
+
+.nexora-auth-box::after {
+    content: "";
+
+    position: absolute;
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -80px;
+
+    background: rgba(124, 58, 237, 0.12);
+
+    filter: blur(50px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* TOP LABEL */
+
+.nexora-auth-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #22D3EE;
+
+    text-transform: uppercase;
+}
+
+
+/* TITLE */
+
+.nexora-auth-box h2 {
+    margin: 0 0 14px;
+
+    font-size: clamp(28px, 5vw, 38px);
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    color: #ffffff;
+}
+
+
+.nexora-auth-box p {
+    margin: 0 auto 28px;
+
+    max-width: 350px;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* BUTTONS */
+
+.nexora-auth-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.nexora-auth-primary {
+    width: 100%;
+    padding: 15px 20px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7C3AED,
+            #2563EB
+        );
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 25px rgba(124, 58, 237, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.nexora-auth-primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 35px rgba(124, 58, 237, 0.5),
+        0 0 60px rgba(37, 99, 235, 0.15);
+}
+
+
+.nexora-auth-login {
+    width: 100%;
+    padding: 14px 20px;
+
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.03);
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.nexora-auth-login:hover {
+    background: rgba(124, 58, 237, 0.12);
+
+    border-color: rgba(168, 85, 247, 0.7);
+}
+
+
+/* MAYBE LATER */
+
+.nexora-auth-close {
+    margin-top: 18px;
+
+    border: 0;
+    background: transparent;
+
+    color: rgba(255,255,255,0.4);
+
+    font-family: inherit;
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+
+.nexora-auth-close:hover {
+    color: #ffffff;
+}
+
+
+/* CLOSE X */
+
+.nexora-auth-x {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.03);
+
+    color: rgba(255,255,255,0.6);
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.nexora-auth-x:hover {
+    background: rgba(124,58,237,0.18);
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   LOGGED-IN USER MENU
+===================================================== */
+
+.nexora-user-menu {
+    position: fixed;
+
+    top: 85px;
+    right: 35px;
+
+    z-index: 99999;
+
+    width: 280px;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 5, 35, 0.98),
+            rgba(3, 0, 6, 0.98)
+        );
+
+    border: 1px solid rgba(168,85,247,0.35);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.55),
+        0 0 30px rgba(124,58,237,0.12);
+
+    backdrop-filter: blur(15px);
+
+    animation: nexoraUserMenuIn 0.25s ease;
+}
+
+
+.nexora-user-menu h3 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+.nexora-user-menu p {
+    margin: 0 0 18px;
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 12px;
+
+    word-break: break-word;
+}
+
+
+.nexora-user-menu button {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    border: 1px solid rgba(168,85,247,0.25);
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.03);
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.nexora-user-menu button:hover {
+    background: rgba(124,58,237,0.15);
+
+    border-color: rgba(168,85,247,0.6);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes nexoraOverlayIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes nexoraModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes nexoraUserMenuIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .nexora-auth-box {
+        padding: 36px 22px;
+        border-radius: 20px;
+    }
+
+    .nexora-user-menu {
+        right: 15px;
+        left: 15px;
+        width: auto;
+        top: 78px;
+    }
+
+}
+
+/* ==========================================
+   NAVBAR AUTH BUTTON SPACING
+========================================== */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-actions button {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   FIX AUTH BUTTON OVERLAP
+========================================== */
+
+#logoutBtn {
+    margin-right: 18px !important;
+}
+
+#joinNexoraBtn {
+    margin-left: 0 !important;
+}
+
+/* ==========================================
+   NEXORA AUTH NAVBAR FIX
+========================================== */
+
+.nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 16px !important;
+    flex-shrink: 0 !important;
+}
+
+.nav-actions button {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    width: auto !important;
+}
+
+#logoutBtn {
+    margin: 0 !important;
+}
+
+#joinNexoraBtn {
+    margin: 0 !important;
+}
+
+/* =========================================================
+   NEXORA TEAM — DEMON VIOLET / ELECTRIC BLUE
+   ========================================================= */
+
+.team-section {
+    position: relative;
+    width: 100%;
+    padding: 110px 0 100px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CAROUSEL
+   ========================================================= */
+
+.nexora-team-carousel {
+    position: relative;
+    width: min(1120px, 92%);
+    margin: 55px auto 0;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   HORIZONTAL TRACK
+   ========================================================= */
+
+.nexora-team-grid {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    gap: 16px !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    padding: 12px 8px 25px !important;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    grid-template-columns: none !important;
+}
+
+.nexora-team-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   SMALL CARD
+   ========================================================= */
+
+.nexora-member {
+    position: relative !important;
+
+    flex: 0 0 205px !important;
+
+    width: 205px !important;
+    min-width: 205px !important;
+
+    height: 285px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 16px !important;
+
+    overflow: hidden !important;
+
+    cursor: pointer;
+
+    scroll-snap-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12, 5, 25, .98),
+            rgba(3, 3, 10, .98)
+        ) !important;
+
+    border:
+        1px solid rgba(124,58,237,.28) !important;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45),
+        0 0 20px rgba(124,58,237,.04);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.nexora-member:hover {
+
+    transform: translateY(-9px) !important;
+
+    border-color:
+        rgba(168,85,247,.75) !important;
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,.6),
+        0 0 35px rgba(124,58,237,.18),
+        0 0 70px rgba(37,99,235,.08);
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+   ========================================================= */
+
+.nexora-member.active {
+
+    border-color:
+        rgba(168,85,247,.95) !important;
+
+    box-shadow:
+        0 0 0 1px rgba(168,85,247,.22),
+        0 20px 55px rgba(0,0,0,.6),
+        0 0 35px rgba(124,58,237,.22);
+}
+
+
+/* =========================================================
+   PHOTO
+   ========================================================= */
+
+.member-photo {
+
+    position: relative !important;
+
+    width: 100% !important;
+    height: 205px !important;
+
+    overflow: hidden !important;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(124,58,237,.22),
+            transparent 55%
+        ),
+        #050208 !important;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.member-photo img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform .55s ease,
+        filter .55s ease;
+}
+
+
+.nexora-member:hover
+.member-photo img {
+
+    transform: scale(1.07);
+
+    filter:
+        brightness(.85)
+        contrast(1.1)
+        saturate(1.1);
+}
+
+
+/* =========================================================
+   FALLBACK INITIAL
+   ========================================================= */
+
+.member-placeholder {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color:
+        #a855f7;
+
+    text-shadow:
+        0 0 15px rgba(168,85,247,.65),
+        0 0 35px rgba(124,58,237,.35);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,58,237,.20),
+            transparent 60%
+        ),
+        #050208;
+}
+
+
+/* =========================================================
+   DARK IMAGE OVERLAY
+   ========================================================= */
+
+.member-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 30%,
+            rgba(4,2,10,.25) 55%,
+            rgba(3,2,8,.96) 100%
+        );
+}
+
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.member-number {
+
+    position: absolute;
+
+    top: 12px;
+    left: 13px;
+
+    z-index: 5;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,.75);
+
+    background:
+        rgba(3,0,10,.62);
+
+    border:
+        1px solid rgba(168,85,247,.3);
+
+    padding: 6px 8px;
+
+    border-radius: 6px;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   PLUS BUTTON
+   ========================================================= */
+
+.member-open {
+
+    position: absolute;
+
+    top: 11px;
+    right: 11px;
+
+    z-index: 5;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color:
+        rgba(255,255,255,.9);
+
+    background:
+        rgba(3,0,10,.65);
+
+    border:
+        1px solid rgba(168,85,247,.35);
+
+    font-size: 17px;
+
+    transition:
+        .3s ease;
+}
+
+
+.nexora-member:hover
+.member-open {
+
+    background:
+        #7c3aed;
+
+    color:
+        #fff;
+
+    border-color:
+        #a855f7;
+
+    box-shadow:
+        0 0 18px rgba(168,85,247,.55);
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   MEMBER INFO
+   ========================================================= */
+
+.member-info {
+
+    position: absolute !important;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 6;
+
+    padding:
+        15px 16px 17px !important;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3,0,8,.99),
+            rgba(5,2,12,.82),
+            transparent
+        ) !important;
+}
+
+
+/* ROLE */
+
+.member-role {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 8px !important;
+
+    font-weight: 600;
+
+    letter-spacing: 1.7px;
+
+    color:
+        #a855f7 !important;
+
+    text-shadow:
+        0 0 10px rgba(168,85,247,.35);
+}
+
+
+/* NAME */
+
+.member-info h3 {
+
+    margin: 0 !important;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size: 17px !important;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color:
+        rgba(255,255,255,.95) !important;
+}
+
+
+/* =========================================================
+   PURPLE SCAN LINE
+   ========================================================= */
+
+.nexora-member::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: -10%;
+
+    height: 1px;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a855f7,
+            #22d3ee,
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px rgba(168,85,247,.8);
+}
+
+
+.nexora-member:hover::before {
+
+    opacity: 1;
+
+    animation:
+        demonScan 1.5s linear infinite;
+}
+
+
+@keyframes demonScan {
+
+    from {
+        top: -5%;
+    }
+
+    to {
+        top: 105%;
+    }
+
+}
+
+
+/* =========================================================
+   ARROWS
+   ========================================================= */
+
+.team-arrow {
+
+    flex: 0 0 auto;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(168,85,247,.35);
+
+    background:
+        rgba(7,2,15,.9);
+
+    color:
+        rgba(255,255,255,.8);
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition:
+        .3s ease;
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+.team-arrow:hover {
+
+    color: #fff;
+
+    background:
+        #7c3aed;
+
+    border-color:
+        #a855f7;
+
+    box-shadow:
+        0 0 25px rgba(124,58,237,.45);
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   DETAILS PANEL
+   ========================================================= */
+
+.team-lead-details {
+
+    width:
+        min(900px, 88%);
+
+    margin:
+        35px auto 0;
+
+    padding: 0;
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+
+.team-details-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(168,85,247,.55),
+            rgba(37,99,235,.45),
+            transparent
+        );
+}
+
+
+.team-details-content {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding: 0 10px;
+}
+
+
+/* NUMBER */
+
+.team-details-number {
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(168,85,247,.85);
+
+    padding-top: 7px;
+
+    text-shadow:
+        0 0 12px rgba(168,85,247,.35);
+}
+
+
+/* DETAILS MAIN */
+
+.team-details-main {
+
+    max-width: 680px;
+}
+
+
+/* ROLE */
+
+.team-details-role {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color:
+        #a855f7;
+
+    text-shadow:
+        0 0 12px rgba(168,85,247,.4);
+}
+
+
+/* NAME */
+
+.team-details-main h2 {
+
+    margin:
+        0 0 10px;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        clamp(26px, 4vw, 40px);
+
+    font-weight: 700;
+
+    color:
+        #fff;
+}
+
+
+/* DESCRIPTION */
+
+.team-details-main p {
+
+    margin: 0;
+
+    max-width: 650px;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,255,255,.58);
+}
+
+
+/* STATUS */
+
+.team-details-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 1.8px;
+
+    color:
+        rgba(255,255,255,.55);
+}
+
+
+.status-dot {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+        0 0 12px rgba(34,211,238,.8);
+
+    animation:
+        demonStatus 1.7s ease-in-out infinite;
+}
+
+
+@keyframes demonStatus {
+
+    0%, 100% {
+        opacity: .45;
+        transform: scale(.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .team-section {
+        padding:
+            80px 0;
+    }
+
+    .nexora-team-carousel {
+
+        width: 94%;
+
+        gap: 8px;
+    }
+
+    .team-arrow {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 12px;
+    }
+
+    .nexora-member {
+
+        flex-basis: 175px !important;
+
+        width: 175px !important;
+        min-width: 175px !important;
+
+        height: 250px !important;
+    }
+
+    .member-photo {
+
+        height: 180px !important;
+    }
+
+    .member-info h3 {
+
+        font-size: 15px !important;
+    }
+
+    .team-details-content {
+
+        gap: 14px;
+
+        padding: 0;
+    }
+
+    .team-details-main h2 {
+
+        font-size: 27px;
+    }
+
+    .team-details-main p {
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .team-arrow {
+        display: none;
+    }
+
+    .nexora-team-carousel {
+        width: 92%;
+    }
+
+    .nexora-member {
+
+        flex-basis: 185px !important;
+
+        width: 185px !important;
+        min-width: 185px !important;
+    }
+
+}
+
+/* =========================================================
+   NEXORA TEAM — TRUE MOVING CAROUSEL FIX
+   ========================================================= */
+
+.team-moving-viewport {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.team-moving-track {
+    width: max-content !important;
+    max-width: none !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    gap: 16px !important;
+
+    margin: 0 !important;
+    padding: 12px 0 25px !important;
+
+    overflow: visible !important;
+
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+
+    transform: translate3d(0, 0, 0);
+
+    will-change: transform;
+
+    cursor: default;
+}
+
+/* Remove old scrolling behavior */
+
+.team-moving-track::-webkit-scrollbar {
+    display: none;
+}
+
+.team-moving-track {
+    scrollbar-width: none;
+}
+
+/* Cards */
+
+.team-moving-track .nexora-member {
+    flex: 0 0 205px !important;
+    width: 205px !important;
+    min-width: 205px !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+}
+
+/* Keep hover effect */
+
+.team-moving-track .nexora-member:hover {
+    transform: translateY(-9px) !important;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .team-moving-track .nexora-member {
+        flex: 0 0 175px !important;
+        width: 175px !important;
+        min-width: 175px !important;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .team-moving-track .nexora-member {
+        flex: 0 0 185px !important;
+        width: 185px !important;
+        min-width: 185px !important;
+    }
+}
+
+/* =========================================================
+   FEATURE DETAILS — HIDDEN UNTIL FEATURE IS SELECTED
+   ========================================================= */
+
+#featureDetails {
+    display: none !important;
+}
+
+#featureDetails.feature-visible {
+    display: block !important;
+}

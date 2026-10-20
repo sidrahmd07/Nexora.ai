@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Python Basics</title>
+
+    <meta name="description"
+        content="Learn Python with NOVA, your AI learning companion inside NEXORA AI Academy.">
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- PYTHON CSS -->
+
+    <link rel="stylesheet" href="python.css">
+
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+BACKGROUND
+========================================= -->
+
+<div class="grid-bg"></div>
+
+<div class="cursor-glow"></div>
+
+
+<!-- =========================================
+NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-brands fa-python"></i>
+
+        <span>NEXORA</span>
+
+    </div>
+
+
+    <div class="module-name">
+
+        PYTHON BASICS
+
+    </div>
+
+<button class="back-btn" onclick="window.location.href='aiml.html'">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to AIML
+</button>
+
+    <div class="xp-display">
+
+        <i class="fa-solid fa-star"></i>
+
+        <span id="xpValue">0 XP</span>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================
+NOVA SECTION
+========================================= -->
+
+<section class="nova-section" id="nova">
+
+
+    <div class="mission-label">
+
+        <span>MISSION 01</span>
+
+        <strong>PYTHON BASICS</strong>
+
+    </div>
+
+
+    <div class="nova-container">
+
+
+        <!-- NOVA INTRO -->
+
+        <div class="nova-intro">
+
+            <div>
+
+                <span class="status-dot"></span>
+
+                <span class="online-text">
+                    NOVA ONLINE
+                </span>
+
+            </div>
+
+
+            <h1>
+
+                Meet Your
+
+                <span>AI Friend.</span>
+
+            </h1>
+
+
+            <p>
+
+                I'm NOVA. I'll teach you Python,
+                help you when you're stuck,
+                celebrate your wins and occasionally
+                make terrible jokes. 😭
+
+            </p>
+
+
+            <div class="nova-stats">
+
+                <div>
+
+                    <span>LEVEL</span>
+
+                    <strong>01</strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>MISSION</span>
+
+                    <strong>01</strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>XP</span>
+
+                    <strong id="novaXP">0</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOVA CHARACTER -->
+
+        <div class="nova-character">
+
+            <div class="nova-aura"></div>
+
+            <div class="nova-ring ring-one"></div>
+
+            <div class="nova-ring ring-two"></div>
+
+
+            <div class="nova-avatar">
+
+
+                <div class="nova-head">
+
+                    <div class="ear left"></div>
+
+                    <div class="ear right"></div>
+
+
+                    <div class="face">
+
+                        <div class="eye left-eye"></div>
+
+                        <div class="eye right-eye"></div>
+
+                        <div class="nose"></div>
+
+                        <div class="mouth"></div>
+
+                    </div>
+
+
+                    <div class="hair"></div>
+
+                </div>
+
+
+                <div class="nova-body">
+
+                    <div class="chest-core">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="nova-arm left-arm"></div>
+
+                <div class="nova-arm right-arm"></div>
+
+            </div>
+
+
+            <div class="floating-icon icon-one">
+
+                <i class="fa-solid fa-code"></i>
+
+            </div>
+
+
+            <div class="floating-icon icon-two">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+
+            <div class="floating-icon icon-three">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOVA CHAT -->
+
+    <div class="nova-dialogue">
+
+
+        <div class="nova-name">
+
+            <i class="fa-solid fa-robot"></i>
+
+            NOVA
+
+            <span>AI LEARNING FRIEND</span>
+
+        </div>
+
+
+        <div
+            class="dialogue-text"
+            id="novaDialogue">
+
+            Yo! 👋 Ready to enter the Python world?
+
+            Don't worry... I promise not to make you
+            memorize 500 pages of boring theory. 😂
+
+        </div>
+
+
+        <div class="nova-actions">
+
+
+            <button
+                class="nova-btn"
+                id="startMissionBtn">
+
+                <i class="fa-solid fa-play"></i>
+
+                Start Mission
+
+            </button>
+
+
+            <button
+                class="nova-small-btn"
+                id="askNovaBtn">
+
+                <i class="fa-solid fa-comment"></i>
+
+                Talk to NOVA
+
+            </button>
+
+
+            <button
+                class="nova-small-btn"
+                id="hintBtn">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                Hint
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        <span>Continue your mission</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+MISSION SECTION
+========================================= -->
+
+<section
+    class="mission-section"
+    id="mission">
+
+
+    <div class="mission-header">
+
+        <span>MISSION 01</span>
+
+
+        <h2>
+
+            Enter the
+
+            <strong>Python World</strong>
+
+        </h2>
+
+
+        <p>
+
+            Complete every stage to unlock
+            your next mission.
+
+        </p>
+
+    </div>
+
+
+    <!-- PROGRESS -->
+
+    <div class="mission-progress">
+
+
+        <div class="progress-top">
+
+            <span>MISSION PROGRESS</span>
+
+            <strong id="progressText">
+
+                0%
+
+            </strong>
+
+        </div>
+
+
+        <div class="progress-track">
+
+            <div
+                class="progress-fill"
+                id="progressFill">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+    INFINITE MOVING LESSON CARDS
+    ========================================= -->
+
+    <div class="lesson-viewport">
+
+        <div class="lesson-track">
+
+
+            <!-- NOTES -->
+
+            <article class="learning-card notes-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <span>STAGE 01</span>
+
+                    <h3>Notes</h3>
+
+                    <p>
+
+                        Read simple explanations
+                        before writing your first code.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="card-btn"
+                    onclick="openNotes()">
+
+                    Open Notes
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+            <!-- VIDEO -->
+
+            <article class="learning-card video-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-play"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <span>STAGE 02</span>
+
+                    <h3>Video Lessons</h3>
+
+                    <p>
+
+                        Learn Python through
+                        visual explanations and examples.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="card-btn"
+                    onclick="openVideos()">
+
+                    Watch Lesson
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+            <!-- QUIZ -->
+
+            <article class="learning-card quiz-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <span>STAGE 03</span>
+
+                    <h3>Quiz</h3>
+
+                    <p>
+
+                        Test whether you actually
+                        understood the concept.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="card-btn"
+                    onclick="openQuiz()">
+
+                    Take Quiz
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+            <!-- PRACTICE -->
+
+            <article class="learning-card practice-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-terminal"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <span>STAGE 04</span>
+
+                    <h3>Practice</h3>
+
+                    <p>
+
+                        Write Python code and
+                        complete your first task.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="card-btn"
+                    onclick="openPractice()">
+
+                    Start Coding
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+            <!-- CHALLENGE -->
+
+            <article class="learning-card challenge-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-gamepad"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <span>STAGE 05</span>
+
+                    <h3>Challenge</h3>
+
+                    <p>
+
+                        Beat NOVA's challenge
+                        and earn bonus XP.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="card-btn"
+                    onclick="openChallenge()">
+
+                    Accept Challenge
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- NEXT MISSION -->
+
+    <div class="next-mission">
+
+
+        <div class="next-icon">
+
+            <i class="fa-solid fa-lock"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>NEXT LEVEL</span>
+
+            <h3>
+                
+    Control Flow
+
+            </h3>
+
+
+            <p id="unlockText">
+
+Complete Python Basics to unlock Control Flow.
+
+            </p>
+
+        </div>
+
+
+        <button
+            id="nextMissionBtn"
+             class="next-btn"
+            disabled>
+
+            Locked
+
+            <i class="fa-solid fa-lock"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+LESSON CONTENT MODAL
+========================================= -->
+
+<div id="lessonModal" class="lesson-modal">
+
+    <div class="lesson-modal-box">
+
+        <button class="modal-close" onclick="closeLessonModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-header">
+            <span id="modalStageLabel">STAGE</span>
+            <h2 id="modalTitle">Title</h2>
+        </div>
+
+        <div class="modal-body" id="modalBody">
+            <!-- content injected by JS -->
+        </div>
+<div class="modal-footer">
+
+    <button
+        class="back-btn"
+        onclick="closeLessonModal()">
+
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Python
+
+    </button>
+
+
+    <button
+        class="gold-btn"
+        id="modalCompleteBtn"
+        onclick="markStageComplete()">
+
+        Mark Complete
+
+        <i class="fa-solid fa-check"></i>
+
+    </button>
+
+</div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     PYTHON VIDEO MODAL
+========================================= -->
+
+<div id="videoModal" class="lesson-modal">
+
+    <div class="lesson-modal-box video-modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeVideoModal()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-header">
+
+            <span>STAGE 02 · VIDEO LESSON</span>
+
+            <h2>Python Basics — Video Lesson</h2>
+
+        </div>
+
+
+        <div class="video-container">
+
+            <iframe
+                id="pythonVideo"
+                src="https://www.youtube.com/embed/kqtD5dpn9C8"
+                title="Python for Beginners"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <div class="video-info">
+
+            <h3>🎥 What you'll learn</h3>
+
+            <p>
+                Python basics, your first program, variables,
+                input, type conversion, strings, operators,
+                conditions, loops, lists and more.
+            </p>
+
+        </div>
+
+
+        <div class="modal-footer">
+
+            <button
+                class="back-btn"
+                onclick="closeVideoModal()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Python
+
+            </button>
+
+
+            <button
+                class="gold-btn"
+                onclick="completeVideoLesson()">
+
+                Mark Video Complete
+
+                <i class="fa-solid fa-check"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     PYTHON QUIZ MODAL
+========================================= -->
+
+<div id="quizModal" class="lesson-modal">
+
+    <div class="lesson-modal-box quiz-modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeQuiz()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-header">
+
+            <span>STAGE 03 · PYTHON QUIZ</span>
+
+            <h2 id="quizTitle">
+                Python Basics Quiz
+            </h2>
+
+        </div>
+
+
+        <!-- QUESTION -->
+
+        <div class="quiz-question-box">
+
+            <div class="quiz-top">
+
+                <span id="questionNumber">
+                    Question 1 / 10
+                </span>
+
+                <span id="quizScore">
+                    Score: 0
+                </span>
+
+            </div>
+
+
+            <h3 id="questionText">
+                Loading question...
+            </h3>
+
+
+            <div
+                id="quizOptions"
+                class="quiz-options">
+            </div>
+
+
+            <p
+                id="quizFeedback"
+                class="quiz-feedback">
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="modal-footer">
+
+            <button
+                class="back-btn"
+                onclick="closeQuiz()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Python
+
+            </button>
+
+
+            <button
+                id="nextQuestionBtn"
+                class="gold-btn"
+                onclick="nextQuestion()"
+                disabled>
+
+                Next
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================================
+     PYTHON CHALLENGE MODAL
+========================================= -->
+
+<div id="challengeModal" class="lesson-modal">
+
+    <div class="lesson-modal-box challenge-modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeChallenge()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-header">
+
+            <span>STAGE 05 · FINAL CHALLENGE</span>
+
+            <h2 id="challengeTitle">
+                Python Basics Challenge
+            </h2>
+
+            <p>
+                Complete the challenge and prove your Python skills.
+            </p>
+
+        </div>
+
+
+        <!-- CHALLENGE PROGRESS -->
+
+        <div class="challenge-progress">
+
+            <span id="challengeNumber">
+                Challenge 1 / 5
+            </span>
+
+            <span id="challengeScore">
+                Score: 0
+            </span>
+
+        </div>
+
+
+        <!-- CHALLENGE QUESTION -->
+
+        <div class="challenge-box">
+
+            <h3 id="challengeQuestion">
+                Loading challenge...
+            </h3>
+
+
+            <div
+                id="challengeOptions"
+                class="challenge-options">
+            </div>
+
+
+            <p
+                id="challengeFeedback"
+                class="challenge-feedback">
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="modal-footer">
+
+            <button
+                class="back-btn"
+                onclick="closeChallenge()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Python
+
+            </button>
+
+
+            <button
+                id="nextChallengeBtn"
+                class="gold-btn"
+                onclick="nextChallenge()"
+                disabled>
+
+                Next
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================================
+     PYTHON CHALLENGE MODAL
+========================================= -->
+
+<div id="challengeModal" class="lesson-modal">
+
+    <div class="lesson-modal-box challenge-modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeChallenge()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-header">
+
+            <span>
+                STAGE 05 · FINAL CHALLENGE · 10 QUESTIONS
+            </span>
+
+            <h2>
+                Python Basics Challenge
+            </h2>
+
+            <p>
+                Get at least 7 out of 10 correct to
+                complete the challenge.
+            </p>
+
+        </div>
+
+
+        <div class="challenge-progress">
+
+            <span id="challengeNumber">
+                Challenge 1 / 10
+            </span>
+
+            <span id="challengeScore">
+                Score: 0
+            </span>
+
+        </div>
+
+
+        <div class="challenge-box">
+
+            <h3 id="challengeQuestion">
+                Loading challenge...
+            </h3>
+
+
+            <div
+                id="challengeOptions"
+                class="challenge-options">
+            </div>
+
+
+            <p
+                id="challengeFeedback"
+                class="challenge-feedback">
+            </p>
+
+        </div>
+
+
+        <div class="modal-footer">
+
+            <button
+                class="back-btn"
+                onclick="closeChallenge()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Python
+
+            </button>
+
+
+            <button
+                id="nextChallengeBtn"
+                class="gold-btn"
+                onclick="nextChallenge()"
+                disabled>
+
+                Next
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================================
+     PYTHON PRACTICE MODAL
+========================================= -->
+
+<div id="practiceModal" class="lesson-modal">
+
+    <div class="lesson-modal-box practice-modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closePractice()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-header">
+
+            <span>
+                STAGE 04 · PYTHON PRACTICE · 5 QUESTIONS
+            </span>
+
+            <h2>
+                Write Your Answers
+            </h2>
+
+            <p>
+                Type the answer in the box and check it.
+            </p>
+
+        </div>
+
+
+        <div class="practice-progress">
+
+            <span id="practiceNumber">
+                Question 1 / 5
+            </span>
+
+            <span id="practiceScore">
+                Score: 0
+            </span>
+
+        </div>
+
+
+        <div class="practice-box">
+
+            <h3 id="practiceQuestion">
+                Loading question...
+            </h3>
+
+
+            <input
+                type="text"
+                id="practiceAnswer"
+                class="practice-input"
+                placeholder="Type your answer..."
+                autocomplete="off"
+            >
+
+
+            <p
+                id="practiceFeedback"
+                class="practice-feedback">
+            </p>
+
+        </div>
+
+
+        <div class="modal-footer">
+
+            <button
+                class="back-btn"
+                onclick="closePractice()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Python
+
+            </button>
+
+
+            <button
+                id="checkPracticeBtn"
+                class="gold-btn"
+                onclick="checkPracticeAnswer()">
+
+                Check Answer
+
+                <i class="fa-solid fa-check"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+
+<!-- =========================================
+FOOTER
+========================================= -->
+
+<footer>
+
+    <h3>NEXORA AI</h3>
+
+    <p>
+        Learn • Build • Innovate
+    </p>
+
+</footer>
+
+
+<!-- PYTHON JS -->
+
+<script src="python.js"></script>
+
+
+<script type="module" src="nexora-guard.js"></script>
+</body>
+
+</html>

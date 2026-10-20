@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         3D SCENE
+    ========================================== -->
+
+    <div id="three-container"></div>
+
+
+    <!-- =========================================
+         NEXORA LOGO
+    ========================================== -->
+
+    <div class="nexora-logo">
+        <span>N</span><span>X</span>
+        <div>NEXORA</div>
+    </div>
+
+
+    <!-- =========================================
+         SYSTEM STATUS
+    ========================================== -->
+
+    <div class="system-status">
+        <span class="status-dot"></span>
+        NEXORA SYSTEM ONLINE
+    </div>
+
+
+    <!-- =========================================
+         LOGIN PANEL
+    ========================================== -->
+
+    <main class="login-wrapper">
+
+        <section class="login-panel">
+
+            <div class="login-tag">
+                NEXORA // AUTHENTICATION
+            </div>
+
+            <h1>
+                Welcome<br>
+                <span>Back, Nexorian.</span>
+            </h1>
+
+            <p class="login-description">
+                Enter the Nexora ecosystem.
+            </p>
+
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label for="email">
+                        EMAIL / USERNAME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="email"
+                        placeholder="Enter your email"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="password">
+                        PASSWORD
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label class="remember">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="#" id="forgotPassword">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    <span>ENTER NEXORA</span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <div class="divider">
+                <span></span>
+                OR
+                <span></span>
+            </div>
+
+
+            <button class="social-login">
+                CONTINUE WITH GOOGLE
+            </button>
+
+
+            <p class="create-account">
+                New to Nexora?
+                <a href="signup.html">
+                    Create account
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         3D SCENE LABEL
+    ========================================== -->
+
+    <div class="scene-label">
+
+        <span>01</span>
+
+        <div>
+            <small>NEXORA AI</small>
+            <strong>LEARNING COMPANION</strong>
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         THREE.JS
+    ========================================== -->
+
+    <script type="module" src="login.js"></script>
+
+</body>
+</html>

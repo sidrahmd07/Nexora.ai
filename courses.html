@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Courses</title>
+
+    <meta name="description"
+        content="Every Nexora learning path in one place: what is live, what is coming, and how far you have got.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="courses.css">
+
+</head>
+
+<body>
+
+    <div class="grid-bg"></div>
+
+    <header class="navbar">
+
+        <a class="logo" href="index.html">
+            <i class="fa-solid fa-infinity"></i>
+            <span>NEXORA</span>
+        </a>
+
+        <nav aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="courses.html" aria-current="page">Courses</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <a id="accountLink" class="gold-btn" href="login.html?next=courses.html">Log in</a>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-head">
+
+            <h1>Courses</h1>
+
+            <p id="summaryLine">
+                Two learning paths are open now. Four more are on the way.
+            </p>
+
+            <div class="tools">
+
+                <label class="search" for="courseSearch">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input
+                        id="courseSearch"
+                        type="search"
+                        placeholder="Search a path or topic"
+                        autocomplete="off"
+                    >
+                </label>
+
+                <div class="filters" role="group" aria-label="Filter courses">
+                    <button type="button" class="chip active" data-filter="all">All</button>
+                    <button type="button" class="chip" data-filter="live">Open now</button>
+                    <button type="button" class="chip" data-filter="soon">Coming soon</button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="track-list" id="trackList" aria-live="polite"></section>
+
+    </main>
+
+
+    <footer>
+        <h3>NEXORA</h3>
+        <p>Learn • Build • Innovate</p>
+    </footer>
+
+
+    <script type="module" src="courses.js"></script>
+
+</body>
+
+</html>

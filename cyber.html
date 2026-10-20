@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Cybersecurity</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="cyber.css">
+<script>document.documentElement.classList.add("nx-auth-pending")</script>
+<style>html.nx-auth-pending body{visibility:hidden}</style>
+</head>
+
+<body>
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+    <canvas id="cyberCanvas"></canvas>
+
+    <div class="cyber-grid"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+
+    <!-- =========================
+         BOOT SCREEN
+    ========================== -->
+    <section id="bootScreen" class="boot-screen">
+
+        <div class="boot-core">
+            <div class="boot-ring ring1"></div>
+            <div class="boot-ring ring2"></div>
+            <div class="boot-ring ring3"></div>
+
+            <div class="boot-dot"></div>
+        </div>
+
+        <div class="boot-text">
+            NEXORA CYBER SYSTEM
+        </div>
+
+        <div class="boot-loading">
+            INITIALIZING SECURITY NETWORK...
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+    <header class="topbar">
+
+        <div class="logo">
+            NEXORA <span>// CYBER</span>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN HERO
+    ========================== -->
+    <main id="mainPage" class="main-page">
+
+        <section class="hero">
+
+            <div class="hero-rings">
+                <div class="hero-ring r1"></div>
+                <div class="hero-ring r2"></div>
+                <div class="hero-ring r3"></div>
+            </div>
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    NEXORA SECURITY ACADEMY
+                </div>
+
+                <h1 class="glitch-title" data-text="NEXORA CYBER">
+                    NEXORA CYBER
+                </h1>
+
+                <p>
+                    Learn cybersecurity step-by-step,
+                    from fundamental concepts to advanced security skills.
+                </p>
+
+                <button id="startLearning" class="start-btn">
+                    <span>START LEARNING</span>
+                    <i>→</i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MODULE MAP
+        ========================== -->
+        <section id="moduleSection" class="module-section">
+
+            <div class="map-header">
+                <span>CYBERSECURITY LEARNING NETWORK</span>
+                <small>SELECT A MODULE</small>
+            </div>
+
+            <div id="moduleMap" class="module-map">
+
+                <svg class="connection-lines" viewBox="0 0 1000 700" preserveAspectRatio="none">
+
+                    <line x1="500" y1="350" x2="500" y2="110"></line>
+                    <line x1="500" y1="350" x2="715" y2="225"></line>
+                    <line x1="500" y1="350" x2="715" y2="475"></line>
+                    <line x1="500" y1="350" x2="500" y2="590"></line>
+                    <line x1="500" y1="350" x2="285" y2="475"></line>
+                    <line x1="500" y1="350" x2="285" y2="225"></line>
+
+                </svg>
+
+
+                <!-- =========================
+                     CENTER BASICS
+                ========================== -->
+                <button
+                    id="basicsModule"
+                    class="module-node basics-node unlocked"
+                >
+
+                    <span class="node-pulse"></span>
+
+                    <span class="node-icon">⌬</span>
+
+                    <strong>
+                        CYBERSECURITY
+                        <br>
+                        BASICS
+                    </strong>
+
+                    <small>
+                        START HERE
+                    </small>
+
+                </button>
+
+
+                <!-- =========================
+                     OTHER MODULES
+                ========================== -->
+
+                <button
+                    class="module-node module-top locked"
+                    data-module="networking"
+                >
+                    <span class="lock">🔒</span>
+                    <strong>NETWORKING</strong>
+                    <small>LOCKED</small>
+                </button>
+
+
+                <button
+                    class="module-node module-right-top locked"
+                    data-module="linux"
+                >
+                    <span class="lock">🔒</span>
+                    <strong>LINUX</strong>
+                    <small>LOCKED</small>
+                </button>
+
+
+                <button
+                    class="module-node module-right-bottom locked"
+                    data-module="ethical"
+                >
+                    <span class="lock">🔒</span>
+                    <strong>ETHICAL HACKING</strong>
+                    <small>LOCKED</small>
+                </button>
+
+
+                <button
+                    class="module-node module-bottom locked"
+                    data-module="web"
+                >
+                    <span class="lock">🔒</span>
+                    <strong>WEB SECURITY</strong>
+                    <small>LOCKED</small>
+                </button>
+
+
+                <button
+                    class="module-node module-left-bottom locked"
+                    data-module="crypto"
+                >
+                    <span class="lock">🔒</span>
+                    <strong>CRYPTOGRAPHY</strong>
+                    <small>LOCKED</small>
+                </button>
+
+
+                <button
+                    class="module-node module-left-top locked"
+                    data-module="forensics"
+                >
+                    <span class="lock">🔒</span>
+                    <strong>DIGITAL FORENSICS</strong>
+                    <small>LOCKED</small>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         ZOOM TRANSITION
+    ========================== -->
+    <div id="moduleTransition" class="module-transition">
+
+        <div class="transition-core"></div>
+
+        <div class="transition-ring tr1"></div>
+        <div class="transition-ring tr2"></div>
+        <div class="transition-ring tr3"></div>
+
+        <div class="transition-text">
+            LOADING MODULE
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CYBERSECURITY BASICS PAGE
+         INCLUDED INSIDE SAME HTML
+    ========================== -->
+    <section id="basicsPage" class="basics-page">
+
+        <div class="basics-background"></div>
+
+        <header class="basics-header">
+
+            <button id="backToModules" class="back-btn">
+                ← MODULE MAP
+            </button>
+
+            <div class="basics-label">
+                NEXORA // CYBERSECURITY BASICS
+            </div>
+
+            <div class="basics-progress">
+                <span id="basicsProgressText">0 / 5</span>
+            </div>
+
+        </header>
+
+
+        <div class="basics-content">
+
+            <div class="basics-title">
+
+                <span class="section-tag">
+                    MODULE 01
+                </span>
+
+                <h2>
+                    CYBERSECURITY
+                    <span>BASICS</span>
+                </h2>
+
+                <p>
+                    Understand the fundamental ideas behind cybersecurity
+                    before moving into networking and advanced security topics.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 BASIC CONCEPTS
+            ========================== -->
+
+            <div class="concept-grid">
+
+                <article class="concept-card">
+                    <span>01</span>
+                    <h3>What is Cybersecurity?</h3>
+                    <p>
+                        Cybersecurity is the practice of protecting
+                        computers, networks, applications and data
+                        from unauthorized access and attacks.
+                    </p>
+                </article>
+
+
+                <article class="concept-card">
+                    <span>02</span>
+                    <h3>Confidentiality</h3>
+                    <p>
+                        Confidentiality means information should only
+                        be accessible to authorized people.
+                    </p>
+                </article>
+
+
+                <article class="concept-card">
+                    <span>03</span>
+                    <h3>Integrity</h3>
+                    <p>
+                        Integrity means information should remain
+                        accurate and should not be changed improperly.
+                    </p>
+                </article>
+
+
+                <article class="concept-card">
+                    <span>04</span>
+                    <h3>Availability</h3>
+                    <p>
+                        Availability means systems and information
+                        should be accessible when authorized users need them.
+                    </p>
+                </article>
+
+
+                <article class="concept-card">
+                    <span>05</span>
+                    <h3>Threat</h3>
+                    <p>
+                        A threat is something that can potentially
+                        cause harm to a system or its information.
+                    </p>
+                </article>
+
+
+                <article class="concept-card">
+                    <span>06</span>
+                    <h3>Vulnerability</h3>
+                    <p>
+                        A vulnerability is a weakness that could
+                        potentially be exploited.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <!-- =========================
+                 BASICS TASK AREA
+            ========================== -->
+
+            <div class="basics-task">
+
+                <div class="task-heading">
+
+                    <span>
+                        KNOWLEDGE CHECK
+                    </span>
+
+                    <h3 id="basicTaskTitle">
+                        Task 1
+                    </h3>
+
+                </div>
+
+
+                <p id="basicTaskQuestion">
+                    What are the three main goals of cybersecurity
+                    commonly represented by the CIA triad?
+                </p>
+
+
+                <div id="answerOptions" class="answer-options">
+
+                    <button data-answer="wrong">
+                        Authentication, Authorization, Accounting
+                    </button>
+
+                    <button data-answer="correct">
+                        Confidentiality, Integrity, Availability
+                    </button>
+
+                    <button data-answer="wrong">
+                        Client, Internet, Application
+                    </button>
+
+                    <button data-answer="wrong">
+                        Control, Inspection, Access
+                    </button>
+
+                </div>
+
+
+                <div id="taskFeedback" class="task-feedback"></div>
+
+            </div>
+
+
+            <!-- =========================
+                 COMPLETION
+            ========================== -->
+
+            <div id="basicsComplete" class="basics-complete">
+
+                <div class="complete-core">
+                    ✓
+                </div>
+
+                <h3>
+                    CYBERSECURITY BASICS COMPLETE
+                </h3>
+
+                <p>
+                    You have completed the foundation module.
+                    Networking is now unlocked.
+                </p>
+
+                <button id="returnToMap" class="continue-btn">
+                    RETURN TO MODULE MAP →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="cyber.js"></script>
+
+<script type="module" src="nexora-guard.js"></script>
+</body>
+</html>

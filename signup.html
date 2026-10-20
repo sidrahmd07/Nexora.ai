@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXORA | Create Account</title>
+
+    <link
+        rel="stylesheet"
+        href="signup.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="signup-background"></div>
+
+
+    <!-- =========================================
+         NEXORA LOGO
+    ========================================== -->
+
+    <div class="nexora-logo">
+
+        <span>N</span>
+        <span>X</span>
+
+        <div>NEXORA</div>
+
+    </div>
+
+
+    <!-- =========================================
+         SYSTEM STATUS
+    ========================================== -->
+
+    <div class="system-status">
+
+        <span class="status-dot"></span>
+
+        NEXORA SYSTEM ONLINE
+
+    </div>
+
+
+    <!-- =========================================
+         SIGNUP
+    ========================================== -->
+
+    <main class="signup-wrapper">
+
+        <section class="signup-panel">
+
+
+            <div class="signup-tag">
+
+                NEXORA // NEW USER REGISTRATION
+
+            </div>
+
+
+            <h1>
+
+                Become<br>
+
+                <span>A Nexorian.</span>
+
+            </h1>
+
+
+            <p class="signup-description">
+
+                Create your account and enter the
+                Nexora ecosystem.
+
+            </p>
+
+
+            <!-- =====================================
+                 FORM
+            ====================================== -->
+
+            <form id="signupForm">
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label for="name">
+
+                        FULL NAME
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="email">
+
+                        EMAIL
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="password">
+
+                        PASSWORD
+
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                        >
+
+                            ◉
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+
+                        CONFIRM PASSWORD
+
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                        >
+
+                            ◉
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CREATE BUTTON -->
+
+                <button
+                    type="submit"
+                    class="signup-button"
+                >
+
+                    <span>
+
+                        CREATE NEXORA ACCOUNT
+
+                    </span>
+
+                    <span class="button-arrow">
+
+                        →
+
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+            <!-- =====================================
+                 MESSAGE
+            ====================================== -->
+
+            <div
+                id="signupMessage"
+                class="signup-message"
+            ></div>
+
+
+            <!-- =====================================
+                 LOGIN
+            ====================================== -->
+
+            <p class="login-account">
+
+                Already a Nexorian?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         SCENE LABEL
+    ========================================== -->
+
+    <div class="scene-label">
+
+        <span>01</span>
+
+        <div>
+
+            <small>NEXORA</small>
+
+            <strong>NEW NEXORIAN</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         FIREBASE + SIGNUP
+    ========================================== -->
+
+    <script
+        type="module"
+        src="signup.js"
+    ></script>
+
+
+</body>
+
+</html>
